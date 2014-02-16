@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* =======================================
+
+    index_contents CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.index_contents(枠組み)
+    2.index_contents(テキスト)
+    
+========================================== */
+
+/* 1.index_contents(枠組み)
+========================================== */
+
+#index_contents {
+}
+#index_contents #contentsHeader {
+    width: 1120px;
+    height: 40px;
+    margin: 0 20px 0px 20px;
+}
+#index_contents #month {
+    float: left;
+}
+
+#index_contents #oneliner_ads {
+    float: right;
+}
+
+#index_contents #cleafix {
+    clear: both;
+}
+
+
+
+#index_contents table#index_navi {
+    border: 1px solid black;
+    width: 1120px;
+    height: 500px;
+    margin: 0 20px 20px 20px;
+}
+
+/* 2.index_contents(テキスト)
+========================================== */
+#index_contents #month,
+#index_contents #oneliner_ads {
+        font-size: 138.5%;
+        line-height: 1.112;
+        padding: 10px 0px 0px 0px;
+}
+
+
+
+#index_contents table#index_navi {
+        font-size: 123.1%;
+        line-height: 1.124;
+}
+
+#index_contents table#index_navi td{
+    text-align: right;
+    vertical-align: top;
+    border: 1px solid black;
+    width: 160px;
+    height: 100px;
+    overflow: auto;
+}
+
+#index_contents table#index_navi {
+}
+/*イベント広告の設定*/
+#index_navi td p {
+    cursor: pointer;
+}
+
+#index_navi td ul {
+    border: 0px solid black;
+    /*position: relative;
+    top: -83px;
+    left: 0px;*/
+    margin:-83px 0 0 0;
+    cursor: pointer;
+    background: #ffbf80;
+}
+#index_navi td li:hover {
+    background: #d56a00;
+}
+
+
+#index_contents strong {
+    font-weight: bold;
+}
+
+#index_contents em {
+    font-style: italic;
+}
+
+#index_contents a {
+    color: #000000;
+    text-decoration:;
+}
+/*カレンダー日付枠*/
+#index_navi a {
+background: #ffbf80;
+display:block;
+width:100%;
+height:100%;
+text-decoration: none;
+}
+/*-------*/
+#index_contents a:hover {
+    color: #ff0000;
+    text-decoration:;
+}
+/*カレンダー日付枠*/
+#index_navi a:hover {
+    background: #d56a00;
+    text-decoration: none;
+    color: black;
+}

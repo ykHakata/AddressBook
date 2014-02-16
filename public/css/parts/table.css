@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+/* =======================================
+
+    table CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.region_situation(時間割下地)
+    
+========================================== */
+
+/* 1.region_situation(時間割下地)
+========================================== */
+
+
+    /* 3-5.situation contens用時間割
+    ----------------------------------- */
+    /*予約カレンダーの外枠*/
+    #rooms_flowout {
+        position: relative;  /*予約カレンダーヘッド位置基準*/
+        padding: 80px 0 0 0;
+    }
+    
+    /*予約カレンダーのヘッド*/
+    #rooms_flowout thead{
+        position: absolute;  /*予約カレンダーヘッド位置決め*/
+        top: 0px;            /*予約カレンダーヘッド位置決め*/
+        left: 0px;           /*予約カレンダーヘッド位置決め*/
+        height: 80px;
+    }
+    
+    /*予約カレンダーボディ用枠*/
+    #rooms_flowout #rooms_flow {
+        overflow: auto;      /*予約カレンダースクロール設定*/
+        height: 420px;
+    }
+    
+    /*予約カレンダーのボディ*/
+    #rooms_flowout tbody{
+        border: 1px solid black;
+    }
+    
+    /*予約カレンダーテーブル全体*/
+    #rooms_flowout table {}
+    
+    /*予約カレンダーヘッドセル設定*/
+    #rooms_flowout th {
+        height: 39px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid black;
+    }
+    
+    /*予約カレンダーボディセル設定*/
+    #rooms_flowout td {
+        height: 30px;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        text-align: right;
+        vertical-align: top;
+    }
+    
+    /*予約カレンダー時間セルの設定*/
+    #rooms_flowout th.tt,
+    #rooms_flowout td.t  {
+        width: 40px;
+        border: 1px solid white;
+        border-right: 1px solid black;
+    }
+    
+    /*予約カレンダー部屋セル横幅*/
+    #rooms_flowout th.col1
+    {width: 74px;}
+    #rooms_flowout td.ta,   #rooms_flowout td.tb,
+    #rooms_flowout td.tc,   #rooms_flowout td.td, #rooms_flowout td.te,
+    #rooms_flowout td.tf,   #rooms_flowout td.tg, #rooms_flowout td.th,
+    #rooms_flowout td.ti,   #rooms_flowout td.tj 
+    {width: 74px;}
+
+    /*予約カレンダー部屋セル横幅(改訂版)*/
+    #rooms_flowout th.col1
+    {width: 74px;}
+    #rooms_flowout td.t1,   #rooms_flowout td.t2,
+    #rooms_flowout td.t3,   #rooms_flowout td.t4, #rooms_flowout td.t5,
+    #rooms_flowout td.t6,   #rooms_flowout td.t7, #rooms_flowout td.t8,
+    #rooms_flowout td.t9,   #rooms_flowout td.t10 
+    {width: 74px;}
+
+    /*予約カレンダー部屋セル中の区切り点線*/
+    tr#t0600,tr#t0700,tr#t0800,tr#t0900,tr#t1000,tr#t1100,
+    tr#t1200,tr#t1300,tr#t1400,tr#t1500,tr#t1600,tr#t1700,
+    tr#t1800,tr#t1900,tr#t2000,tr#t2100,tr#t2200,tr#t2300,
+    tr#t2400,tr#t2500,tr#t2600,tr#t2700,tr#t2800,tr#t2900
+    {background: ;border-bottom: 1px dotted black;}
+    
+    /*予約カレンダー部屋セル下の区切り直線*/
+    tr#t0630,tr#t0730,tr#t0830,tr#t0930,tr#t1030,tr#t1130,
+    tr#t1230,tr#t1330,tr#t1430,tr#t1530,tr#t1630,tr#t1730,
+    tr#t1830,tr#t1930,tr#t2030,tr#t2130,tr#t2230,tr#t2330,
+    tr#t2430,tr#t2530,tr#t2630,tr#t2730,tr#t2830,tr#t2930
+    {background: ;border-bottom: 1px solid black;}
+
+    /*予約済みの部分に色つける*/
+    .conf_res {
+/*          background: #ff952b; */
+    }
+    
+    /*予約なしの部分*/
+    /*.possi_res {
+    cursor: pointer;
+    background: #ffead5;
+    }
+    
+    .possi_res:hover {
+    background: #ff952b;
+    }*/
+    /*30-30の選択の場合*/
+    .possi_res00 a {
+    /*background: #ffead5;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;*/
+    }
+    .possi_res00 a:hover {
+    /*background: #ff952b;*/
+    }
+    /*00-00の選択の場合*/
+    .possi_res30 a {
+    background: #ffead5;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    }
+    .possi_res30 a:hover {
+    background: #ff952b;
+    }
+    
+    /*利用不可の部分に色つける*/
+    .outside {
+        background: gainsboro;
+    }
+    /*営業時間外の部分に色つける*/
+    .close_store {
+        background: gainsboro;
+    }
+    /*時間経過の部分に色つける*/
+    .timeout {
+        background: gainsboro;
+    }
+    #yoyaku {
+        width: 100%;
+        height: 20px;
+        background: white;
+        margin-top: -10px;
+        cursor: pointer;
+    }
+    #yoyaku:hover {
+        background: blue;
+    }
+    #rinku {
+    background: white; 
+/*     background: black; */
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    }
+    #rinku:hover {
+    background: lightcoral;
+    }
+    
+
+    #conf_res {
+    background: #ffaaaa;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    }
+/*
+    #conf_res:hover {
+    background: #ff0000;
+    }
+*/
+
+/* 管理者予約のバンド利用 */
+    #conf_res_band_admin {
+    background: indianred; 
+/*     background: black; */
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    overflow: auto;
+    word-break: break-all;
+    }
+    #conf_res_band_admin:hover {
+    background: crimson;
+    }
+/* 管理者予約の個人利用 */
+    #conf_res_individual_admin {
+    background: mediumaquamarine;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    overflow: auto;
+    word-break: break-all;
+    }
+    #conf_res_individual_admin:hover {
+    background: darkgreen;
+    }
+/* 管理者予約の利用停止 */
+    #conf_res_stop_admin {
+    background: cadetblue;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    overflow: auto;
+    word-break: break-all;
+    }
+    #conf_res_stop_admin:hover {
+    background: #353535;
+    }
+/* 一般予約のバンド利用 */
+    #conf_res_band_general {
+    background: tomato;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    overflow: auto;
+    word-break: break-all;
+    }
+    #conf_res_band_general:hover {
+    background: red;
+    }
+/* 一般予約の個人利用 */
+    #conf_res_individual_general {
+    background: forestgreen;
+    display:block;
+    text-decoration: none;
+    margin: -31px 0 0px 0;
+    padding: 0 0 0px 0 ;
+    height:202%;
+    overflow: auto;
+    word-break: break-all;
+    }
+    #conf_res_individual_general:hover {
+    background: darkgreen;
+    }
+    
+/* 2.
+========================================== */

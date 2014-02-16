@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* =======================================
+
+    structure CSS
+
+========================================== */
+
+html, body {
+
+}
+
+
+body {
+  background-color: white;
+  border: 1px solid darkgreen;
+  margin: 10px;
+}
+
+#wrapper {
+  background-color: whitesmoke;
+  margin: 5px;
+}
+
+#header {
+  background-color:tomato;
+}
+
+#contents {
+  background-color: white;
+}
+
+#footer {
+  background-color:tomato;
+}
+

@@ -1,0 +1,19 @@
+<!-- ヘッター -->
+<div id="header">
+  <!-- ヘッターナビ -->
+  <ul id="header_navi">
+    <li id="" class=""><a href="/preview">(開発用)</a></li>
+    % if (session 'name') {
+    <li id="" class=""><a href="/all">すべて表示</a></li>
+    <li id="" class=""><a href="">キーワード</a></li>
+    <li id="" class=""><a href="">アイコン</a></li>
+    <li id="" class=""><a href="">新規</a></li>
+    <li id="" class=""><a href="/logout"><%= session 'name' %></a></li>
+    % }
+    % else {
+    <li id="" class=""><a href="">ためしてみる</a></li>
+    <li id="" class=""><a href="/login">login</a></li>
+    % }
+  </ul>
+  <div id="header_clear"></div>
+<!-- /#header --></div>

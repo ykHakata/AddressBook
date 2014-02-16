@@ -1,0 +1,652 @@
+@charset "utf-8";
+
+/* =======================================
+
+    popup CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.popup(拡大ポップアップの下書き)
+    2.text(個別の設定)
+    3.link()
+========================================== */
+/*ライトボックスの一連の設定*/
+/*モーダルウインドウの設定*/
+#glayLayer {
+    width: 100%;
+    height: 100%;
+    background: #b4b4b4;
+    position: fixed;
+    left: 0;
+    top: 0;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    display: none;
+}
+#overLayer {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+    display: none;
+    font-size: 123.1%;
+    line-height: 1.374;
+}
+/*----------------------
+見出しとコメントの場合*/
+/*×ボタンの設定*/
+.L_B_botton{
+    height: 50px;
+}
+.L_B_botton p {
+    text-align: right;
+    padding: 0px 5px 0px 5px;
+    margin: 0 0 0 580px ;
+    cursor: pointer;
+}
+/*見出しの設定*/
+.L_B_head {
+    margin: 0 auto;
+    width: 500px;
+    height: 50px;
+}
+/*本文の設定*/
+/*オーバフロウなし*/
+.L_B_section {
+    margin: 0 auto;
+    width: 498px;
+    height: 448px;
+    border: 1px solid #555555;
+}
+/*オーバフロウあり*/
+.L_B_section_flow {
+    margin: 0 auto;
+    width: 498px;
+    height: 448px;
+    overflow: auto;
+    border: 1px solid #555555;
+}
+/* 2.text(個別の設定)
+========================================== */
+    /*1-1.index_this_m.html
+    ----------------------------------- */
+/*イベント広告設定*/
+.event_data {
+    background:;
+    border: 0px solid black;
+}
+.event_data dt{
+    background:;
+    border: 0px solid black;
+    padding: 0 ;
+    margin: 20px 10px 10px 10px;
+}
+
+.event_data dd{
+    background:;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px ;
+    margin: 10px 10px 10px 10px;
+    height: 22px;
+    overflow: auto;
+}
+
+.event_data dd.event_box{
+    height: 80px;
+    overflow: auto;
+}
+
+
+
+
+
+    /*1-2.entry.html
+      1-5.up_logout.html
+      1-6.up_history_deleted.html
+      1-7.up_reserv_comp.html
+      1-8.up_login_admin
+      1-9.up_history_cansel
+      1-12.up_admin_r_d_edit()
+      ログイン選択画面
+    ----------------------------------- */
+    /*見出し設定*/
+    .L_B_head h2,
+    body.up_logout h2,
+    body.up_history_deleted h2,
+    body.up_reserv_comp h2,
+    body.up_login_admin h2,
+    body.up_history_cansel h2,
+    body.up_admin_r_d_edit h2,
+    body.up_admin_r_u_c_conf h2,
+    body.up_admin_r_u_c_comp h2{
+        padding: 15px 0 0 10px;
+        font-size: 138.5%;
+        line-height: 1.112;
+        text-align: center;
+    }
+    /*本文設定(その１)*/
+    p.part1 {
+        padding: 5px 5px 5px 5px;
+    }
+    /*本文設定(その２)*/
+    p.part2,
+    body.up_logout p,
+    body.up_history_deleted p,
+    body.up_reserv_comp p,
+    body.up_admin_r_u_c_comp p {
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+        padding: 200px 0 0 0;
+    }
+    /*up_login_admin
+      up_history_cansel*/
+    /*入力フォーム設定*/
+    body.up_login_admin    input,
+    body.up_history_cansel input,
+    body.up_admin_r_d_edit input,
+    body.up_admin_r_d_edit select,
+    body.up_admin_r_d_edit textarea {
+        width: 300px;
+        height: 40px;
+        background: #bfbfbf;
+    }
+    body.up_login_admin input.login {width: 100px;}
+    
+    body.up_history_cansel input {width: 200px;}
+    
+    body.up_admin_r_d_edit input,
+    body.up_admin_r_d_edit select {width: 100px;}
+    body.up_admin_r_d_edit textarea {
+        width: 492px;
+        height: 192px;
+        color: #949494;
+        }
+    /*配置の為のテーブル*/
+    /*大きさ自体の設定*/
+    body.up_history_cansel table,
+    body.up_admin_r_d_edit table 
+    {width: 498px;background: ;}
+    
+    body.up_login_admin    table,
+    body.up_history_cansel table {
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+    body.up_login_admin    table tr,
+    body.up_history_cansel table tr {
+        height: 70px;
+    }
+    
+    body.up_login_admin table td{
+        text-align: right;
+    }    
+    body.up_history_cansel table td{
+        text-align: center;
+    }
+    body.up_admin_r_d_edit table th,
+    body.up_admin_r_d_edit table td {
+        border: 0px solid black;
+        vertical-align: middle;
+        height: 50px;
+        text-align: center;
+    }
+    body.up_admin_r_d_edit table .col3,
+    body.up_admin_r_d_edit table .col2{
+        text-align: right;
+        width: 130px;
+    }
+    body.up_admin_r_d_edit table .col1_3 {
+        height: 198px;
+    }
+    /*下線の設定*/
+    body.up_admin_r_d_edit tr#room_n,
+    body.up_admin_r_d_edit tr#reserv_limit,
+    body.up_admin_r_d_edit tr#cansel_limit
+    {border-bottom: 1px solid black;}
+
+    
+    /*1-10.up_reservation()
+    ----------------------------------- */
+    /*テーブル基本設定*/
+/*
+    #up_re_t td {
+        height: 29px;
+        vertical-align: middle;
+        padding: 0px;
+    }
+    #up_re_t {
+    }
+*/
+    #up_reservation {
+        border: 1px solid black;
+        margin: 0 auto;
+        margin-top: 8%;
+    }
+    #up_reservation td {
+        border: 0px solid black;
+        height: 25px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #up_reservation .col1{
+        background: ghostwhite;
+        width: 100px;
+    }
+    #up_reservation .col3{
+        background: ;
+        width: 300px;
+        padding-right: 10px;
+    }
+    #input_text_store_name,
+    #input_text_room_name,
+    .input_text_getstarted_on_day,
+    .input_text_enduse_on_day,
+    #input_text_tel,
+    #input_text_pricescomments,
+    #input_text_remarks,
+    #input_text_message{
+        width: 100%;
+        height: 100%;
+        background: white;
+    }
+    
+    
+    #select_getstarted_on_time,
+    #select_enduse_on_time,
+    #select_useform ,
+    #submit_yoyaku {
+        width: 100%;
+    }
+    
+    
+    
+    /*テーブル列幅設定*/
+    /*余白部*/
+
+/*
+    #up_re_t #col0,
+    #up_re_t #col2,
+    #up_re_t #col4,
+    #up_re_t #col6  {width: 30px;}
+    #up_re_t #col1  {width: 90px;text-align: right;}
+    #up_re_t #col3  {width: 210px;}
+    #up_re_t #col5  {width: 180px;}
+*/
+    /*色付き部の設定*/
+/*
+    #up_re_t #l2 #col3,  #up_re_t #l4 #col3,
+    #up_re_t #l6 #col3,  #up_re_t #l8 #col3,
+    #up_re_t #l10 #col3, #up_re_t #l12 #col3,
+    #up_re_t #l14 #col3, #up_re_t #l16 #col3,
+    #up_re_t #l19 #col3, #up_re_t #l6 #col5,
+    #up_re_t #l8 #col5,  #up_re_t #l19 #col5{
+    background: white;
+    border: 1px solid black;
+    padding-left: 5px;
+    }
+*/
+
+    /*×ボタンの設定*/
+/*
+    #up_re_t #l1 #col6 {
+        text-align: right;
+        vertical-align: top;}
+*/
+    /*注意書きの設定*/
+/*
+    #up_re_t #l10 #col5 {font-size: 60%;}
+    
+    #up_re_t input {
+        width: 100%;
+        height: 100%;
+    }
+*/
+    /*1-11.up_reserv_conf(up_reservation流用)
+    ----------------------------------- */
+
+
+
+/* 3.link()
+========================================== */
+
+    /* 3-1.Default(リンク部初期)
+    ----------------------------------- */
+    #pop_wrapper a
+    {text-decoration: underline; color: #000000;}
+
+    /* 3-2.When Mouse Over
+    ----------------------------------- */
+    #pop_wrapper a:hover
+    {text-decoration: underline; color: #ff0000;}
+
+    /* 3-3.When Active Page
+    ----------------------------------- */
+    {text-decoration: none; color: #ff0000;}
+/*-----------------------------------------------------*/
+
+/* 1.popup(拡大ポップアップの下書き)
+========================================== */
+/*全体の枠*/
+#pop_wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    height: 660px;
+    background: #b4b4b4;
+    padding: 60px 0 0 0;
+}
+/*表示枠の設定*/
+#pop_section {
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    background: white;
+    font-size: 123.1%;
+    line-height: 1.374;
+}
+
+/*----------------------
+見出しとコメントの場合*/
+/*×ボタンの設定*/
+#pop_section #bottom {
+    height: 50px;
+}
+#pop_section #bottom p {
+    text-align: right;
+    padding: 0px 5px 0px 5px;
+    margin: 0 0 0 570px;
+    cursor: pointer;
+}
+/*見出しの設定*/
+#pop_section #head {
+    margin: 0 auto;
+    width: 500px;
+    height: 50px;
+}
+#pop_section_head {
+    text-align: center;
+    font-size: x-large;
+    
+}
+/* 管理者予約のキャンセル画面設定 */
+#admin_reserv_cansel_frem {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 15%;
+    border: 1px solid black;
+    padding-top: 5%;
+    background: linen;
+}
+/* テーブル自体の設定 */
+#admin_reserv_cansel {
+    background: linen;
+    
+}
+#admin_reserv_cansel th ,
+#admin_reserv_cansel td {
+    border-top: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+#admin_reserv_cansel .col1 {
+    width: 20%;
+}
+#admin_reserv_cansel .col2 ,
+#admin_reserv_cansel .col2_3 {
+    padding-right: 7px;
+}
+#admin_reserv_cansel_botton {
+border-top: 1px solid black;
+width: 100%;
+
+}
+#admin_reserv_cansel_botton td {
+background: linen;    
+height: 100%;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+.h_cansel_botton {
+border: 2px solid red;
+width: 80%;
+background: #ff5555;    
+}
+
+
+
+/*本文の設定*/
+/*オーバフロウなし*/
+#pop_section #section {
+    margin: 0 auto;
+    width: 498px;
+    height: 448px;
+    border: 1px solid #555555;
+}
+/*オーバフロウあり*/
+#pop_section #section_flow {
+    margin: 0 auto;
+    width: 498px;
+    height: 448px;
+    overflow: auto;
+    border: 1px solid #555555;
+}
+/* 2.text(個別の設定)
+========================================== */
+    /*1-1.up_ads.html
+    ----------------------------------- */
+    /*テーブル基本設定*/
+    #up_ads_t th,
+    #up_ads_t td {
+        width: 50px;
+        height: 49px;
+        text-align: left;
+        vertical-align: middle;
+        padding: 0px 5px 0px 5px;
+    }
+    /*テーブル寸歩調整*/
+    #up_ads_t #col2 {width: 500px;}
+    /*×ボタンの設定*/
+    #up_ads_t #l1 #col3 {
+        text-align: right;
+        vertical-align: top;
+    }
+    
+    /*テーブル線設定*/
+    .up_ads #l3 #col2,
+    .up_ads #l5 #col2,
+    .up_ads #l7 #col2,
+    .up_ads #l11 #col2
+    {border: 1px solid #555555;}
+    
+    /*1-2.up_terms.html
+      1-3.up_signup.html
+      1-4.up_login.html
+      1-5.up_logout.html
+      1-6.up_history_deleted.html
+      1-7.up_reserv_comp.html
+      1-8.up_login_admin
+      1-9.up_history_cansel
+      1-12.up_admin_r_d_edit()
+    ----------------------------------- */
+    /*見出し設定*/
+    body.up_terms  h2,
+    body.up_signup h2,
+    body.up_login  h2,
+    body.up_logout h2,
+    body.up_history_deleted h2,
+    body.up_reserv_comp h2,
+    body.up_login_admin h2,
+    body.up_history_cansel h2,
+    /*body.up_admin_r_d_edit h2,*/
+    body.admin_reserv_edit h2,
+    body.up_admin_r_u_c_conf h2,
+    body.up_admin_r_u_c_comp h2{
+        padding: 15px 0 0 10px;
+        font-size: 138.5%;
+        line-height: 1.112;
+        text-align: center;
+    }
+    /*本文設定(その１)*/
+    body.up_terms  p {
+        padding: 5px 5px 5px 5px;
+    }
+    /*本文設定(その２)*/
+    body.up_signup p,
+    body.up_login  p,
+    body.up_logout p,
+    body.up_history_deleted p,
+    body.up_reserv_comp p,
+    body.up_admin_r_u_c_comp p {
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+        padding: 200px 0 0 0;
+    }
+    /*up_login_admin
+      up_history_cansel*/
+    /*入力フォーム設定*/
+    body.up_login_admin    input,
+    body.up_history_cansel input,
+    /*body.up_admin_r_d_edit input,*/
+    /*body.up_admin_r_d_edit select,*/
+    /*body.up_admin_r_d_edit textarea*/
+    body.admin_reserv_edit input,
+    body.admin_reserv_edit select,
+    body.admin_reserv_edit textarea {
+        width: 300px;
+        height: 40px;
+        background: #bfbfbf;
+    }
+    body.up_login_admin input.login {width: 100px;}
+    
+    body.up_history_cansel input {width: 200px;}
+    
+    /*body.up_admin_r_d_edit input,*/
+    /*body.up_admin_r_d_edit select */
+    body.admin_reserv_edit input,
+    body.admin_reserv_edit select 
+    {width: 100px;}
+    
+    /*body.up_admin_r_d_edit textarea */
+    body.admin_reserv_edit textarea {
+        width: 492px;
+        height: 192px;
+        color: #949494;
+    }
+    /*配置の為のテーブル*/
+    /*大きさ自体の設定*/
+    body.up_history_cansel table,
+    /*body.up_admin_r_d_edit table */
+    /*body.admin_reserv_edit table *//*これが犯人だ！！*/
+    body.admin_reserv_edit #admin_reserv_edit_table
+    {width: 498px;background: ;}
+    
+    body.up_login_admin    table,
+    body.up_history_cansel table {
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+    body.up_login_admin    table tr,
+    body.up_history_cansel table tr {
+        height: 70px;
+    }
+    
+    body.up_login_admin table td{
+        text-align: right;
+    }    
+    body.up_history_cansel table td{
+        text-align: center;
+    }
+    /*body.up_admin_r_d_edit table th,*/
+    /*body.up_admin_r_d_edit table td */
+    body.admin_reserv_edit table th,
+    body.admin_reserv_edit table td {
+        border: 0px solid black;
+        vertical-align: middle;
+        height: 50px;
+        text-align: center;
+    }
+    
+    /*body.up_admin_r_d_edit table .col3,*/
+    /*body.up_admin_r_d_edit table .col2*/
+    body.admin_reserv_edit table .col3,
+    body.admin_reserv_edit table .col2 {
+        text-align: right;
+        width: 130px;
+    }
+    /*body.up_admin_r_d_edit table .col1_3 */
+    body.admin_reserv_edit table .col1_3 {
+        height: 198px;
+    }
+    body.admin_reserv_edit table .col1_3 #rema{
+        width: 488px;
+    }
+    /*下線の設定*/
+    /*body.up_admin_r_d_edit tr#room_n,*/
+    /*body.up_admin_r_d_edit tr#reserv_limit,*/
+    /*body.up_admin_r_d_edit tr#cansel_limit*/
+    body.admin_reserv_edit tr#room_n,
+    body.admin_reserv_edit tr#reserv_limit,
+    body.admin_reserv_edit tr#cansel_limit
+    {border-bottom: 1px solid black;}
+
+    
+    /*1-10.up_reservation()
+    ----------------------------------- */
+    /*テーブル基本設定*/
+    #up_re_t td {
+        height: 29px;
+        vertical-align: middle;
+        padding: 0px 5px 0px 5px;
+    }
+    #up_re_t {
+    }
+    /*テーブル列幅設定*/
+    /*余白部*/
+    #up_re_t #col0,
+    #up_re_t #col2,
+    #up_re_t #col4,
+    #up_re_t #col6  {width: 30px;}
+    #up_re_t #col1  {width: 90px;text-align: right;}
+    #up_re_t #col3  {width: 210px;}
+    #up_re_t #col5  {width: 180px;}
+    /*色付き部の設定*/
+    #up_re_t #l2 #col3,  #up_re_t #l4 #col3,
+    #up_re_t #l6 #col3,  #up_re_t #l8 #col3,
+    #up_re_t #l10 #col3, #up_re_t #l12 #col3,
+    #up_re_t #l14 #col3, #up_re_t #l16 #col3,
+    #up_re_t #l19 #col3, #up_re_t #l6 #col5,
+    #up_re_t #l8 #col5,  #up_re_t #l19 #col5
+    {background: #d4d4d4; border: 1px solid black;}
+    /*×ボタンの設定*/
+    #up_re_t #l1 #col6 {
+        text-align: right;
+        vertical-align: top;}
+    /*注意書きの設定*/
+    #up_re_t #l10 #col5 {font-size: 60%;}
+    
+    /*1-11.up_reserv_conf(up_reservation流用)
+    ----------------------------------- */
+
+/* 3.link()
+========================================== */
+
+    /* 3-1.Default(リンク部初期)
+    ----------------------------------- */
+    #pop_wrapper a
+    {text-decoration: underline; color: #000000;}
+
+    /* 3-2.When Mouse Over
+    ----------------------------------- */
+    #pop_wrapper a:hover
+    {text-decoration: underline; color: #ff0000;}
+
+    /* 3-3.When Active Page
+    ----------------------------------- */
+    {text-decoration: none; color: #ff0000;}

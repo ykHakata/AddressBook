@@ -1,18 +1,36 @@
 package AddressBook;
 use Mojo::Base 'Mojolicious';
+use Teng::Schema::Loader;
 
-# This method will run once at server start
+
 sub startup {
-  my $self = shift;
+    my $self = shift;
+    # model(Teng)
+    $self->helper( model => sub {
+        state $model = Teng::Schema::Loader->load(
+            connect_info => ['dbi:SQLite:./lib/AddressBook/Model/address_book.db','',''],
+            namespace    => 'table_name',
+        );
+        return $model;
+    });
+    # Router
+    my $r = $self->routes;
 
-  # Documentation browser under "/perldoc"
-  $self->plugin('PODRenderer');
+    # サイト全体 開発用
+    $r->route('/preview')->to(controller => 'Preview', action => 'list');
+    # オープニング検索
+    $r->route('/')->to(controller => 'Display', action => 'search');
 
-  # Router
-  my $r = $self->routes;
+    $r->route('/login')->to(controller => 'Auth', action => 'login');
+    $r->route('/logout')->to(controller => 'Auth', action => 'logout');
 
-  # Normal route to controller
-  $r->get('/')->to('example#welcome');
+#     $r->route('/member/create')->to(controller => 'member', action => 'create');
+
+#     $r->get('/welcome')->to(controller => 'example', action => 'welcome');
+    $r->route('/all')->to(controller => 'Display', action => 'all');
+#     $r->route('/keyword')->to(controller => 'Display', action => 'keyword');
+#     $r->route('/icon')->to(controller => 'Display', action => 'icon');
+
 }
 
 1;

@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+/* =======================================
+
+	Others CSS
+
+ -----------------------------------------
+	INDEX
+ -----------------------------------------
+ メニュー画面設定
+==========================================*/
+/*=========*/
+/*チュートリアルのcss*/
+#tutorial_logo {
+    float: left;
+}
+
+#tutorial_title {
+    font-weight: bold;
+    border-top: 10px solid saddlebrown;
+    border-bottom: 2px dashed saddlebrown;
+    font-size: xx-large;
+    background-color: darksalmon;
+    text-align: center;
+    padding: 22px 0 22px 0;
+}
+
+#tutorial_mail {
+    font-size: large;
+}
+
+#tutorial_clear {
+    clear: both;
+}
+
+.tutorial_h2 {
+    font-size: xx-large;
+    background-color: darksalmon;
+    padding: 8px;
+    text-align: center;
+        width: ;
+
+}
+.tutorial_h3 {
+    border-top: 1px solid saddlebrown; 
+    border-bottom: 1px solid saddlebrown; 
+    clear: both;
+    text-align: center;
+    font-size: x-large;
+    background-color: wheat;
+    padding: 10px;
+}
+.tutorial_h4 {
+    border-top: 10px solid saddlebrown;
+    border-bottom: 2px dashed saddlebrown;
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    padding: 20px 0 20px 0;
+}
+.tutorial_p {
+    font-size: medium;
+    padding: 15px;
+    line-height: normal;
+}
+#imag {
+    float: right;
+    background-color: ;
+    border: 1px solid black;
+    width: 640px;
+}
+#bun {
+    float: left;
+    background-color:;
+    width: 516px;
+}
+#sr {
+    clear: both;
+    background-color: aqua;
+    width: 640px;
+    border: 1px solid black;
+}
+
+
+/*=========*/
+#blueprint img{
+}
+
+#list_today {
+    width: 1100px;
+    margin: 0 auto;
+    border: 1px solid black;
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    background: #ffead5;
+    }
+
+#blueprint {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 1100px;
+    height: ;
+    border: 1px solid black;
+}
+#list_blueprint {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 1100px;
+    height: ;
+    border: 1px solid black;
+    color: black;
+}
+#list_blueprint li{
+    font-size: xx-large;
+    background: #ffead5;
+    padding: 5px;
+}
+#list_blueprint li:hover{
+    background: white;
+}
+#list_blueprint a{
+    padding: 5px;
+    display:block;
+    font-style:normal;
+    text-decoration:none;
+}
+#list_blueprint a:hover{
+    color:black;
+    font-style:normal;
+    text-decoration:none;
+}
+
+
+/*ads入力フォームのスタイルシート
+========================================== */
+
+/* バリデーション用スタイル
+========================================== */
+.vali,
+body.ads_new .vali {
+    color: red;
+}
+
+/* 見出しの設定(ナビボタン含み)
+========================================== */
+.input_ads {
+    background: #d56a00;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    /*border: 1px solid black;*/
+    padding: 10px;
+}
+.input_ads_n {
+    width: 1100px;
+    background: ;
+    margin: auto;
+    padding-top: 20px;
+    text-align: right;
+    font-size: larger;
+}
+.input_ads_b {
+    width: 200px;
+    height: 50px;
+    font-size: larger;
+    background: #ffd5aa;
+}
+.input_f {
+    color: red;
+    background: ;
+    text-align: left;
+    font-size: xx-large;
+    padding-right: 100px;
+    
+}
+/* 入力テーブル設定
+========================================== */
+
+#input_ads_t {
+    /*background: red;*/
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 1100px;
+}
+#input_ads_t td ,
+#input_ads_t th {
+padding-top: 10px;
+padding-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: larger;
+}
+
+#input_ads_t input ,
+#input_ads_t select ,
+#input_ads_t textarea 
+{
+    width: 500px;
+    height: 30px;
+}
+#input_ads_t textarea 
+{
+    height: 100px;
+}
+body.mainte_ads_serch          #input_ads_t input,
+body.mainte_region_serch       #input_ads_t input ,
+body.mainte_post_serch         #input_ads_t input ,
+body.mainte_storeinfo_serch    #input_ads_t input ,
+body.mainte_roominfo_serch     #input_ads_t input ,
+body.mainte_reserve_serch      #input_ads_t input ,
+body.mainte_registrant_serch   #input_ads_t input ,
+body.mainte_general_serch      #input_ads_t input ,
+body.mainte_profile_serch      #input_ads_t input ,
+body.mainte_acting_serch       #input_ads_t input {
+    width: 50px;
+}
+
+
+body.mainte_ads_serch          #input_ads_t td ,
+body.mainte_ads_serch          #input_ads_t th ,
+body.mainte_region_serch       #input_ads_t td ,
+body.mainte_region_serch       #input_ads_t th ,
+body.mainte_post_serch         #input_ads_t td ,
+body.mainte_post_serch         #input_ads_t th ,
+body.mainte_storeinfo_serch    #input_ads_t td ,
+body.mainte_storeinfo_serch    #input_ads_t th ,
+body.mainte_roominfo_serch     #input_ads_t td ,
+body.mainte_roominfo_serch     #input_ads_t th ,
+body.mainte_reserve_serch      #input_ads_t td ,
+body.mainte_reserve_serch      #input_ads_t th ,
+body.mainte_registrant_serch   #input_ads_t td ,
+body.mainte_registrant_serch   #input_ads_t th ,
+body.mainte_general_serch      #input_ads_t td ,
+body.mainte_general_serch      #input_ads_t th ,
+body.mainte_profile_serch      #input_ads_t td ,
+body.mainte_profile_serch      #input_ads_t th ,
+body.mainte_acting_serch       #input_ads_t td ,
+body.mainte_acting_serch       #input_ads_t th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: smaller;
+}
+
+#line {
+    background: #ffd5aa;
+}
+/* profile入力フォームのスタイルシート
+========================================== */
+
+#profile_table {
+    border-collapse: collapse;
+    color: black;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#profile_table th {
+    width: 200px;
+    text-align: right; 
+    vertical-align: top;
+    border-top: 1px solid black;
+    font-size: large;
+    padding-right: 12px;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+#profile_table td {
+    width: 500px;
+    vertical-align: middle;
+    background-color: burlywood;
+    border-bottom: 1px solid black;
+    color: black;
+    border-left: 4px solid gray;
+    font-size: large;
+}
+#profile_table .required {
+    color: red;
+    text-align: right; 
+}
+#profile_table .header th {
+    font-size: x-large;
+    text-align: center;
+    background: coral;
+}
+#button_submit {
+    width: 100%;
+}
+/* profile_compのスタイルシート
+========================================== */
+#profile_table_comp {
+    border-collapse: collapse;
+    color: black;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#profile_table_comp th {
+    width: 200px;
+    text-align: right; 
+    vertical-align: top;
+    border-top: 1px solid black;
+    font-size: large;
+    padding-right: 12px;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+#profile_table_comp td {
+    width: 500px;
+    vertical-align: middle;
+    background-color: ;
+    border-bottom: 1px solid black;
+    color: black;
+    border-left: 4px solid gray;
+    font-size: large;
+    padding-top: 1px;
+    padding-right: 6px;
+}
+#profile_table_comp .required {
+    color: red;
+    text-align: right; 
+}
+#profile_table_comp .header th {
+    font-size: x-large;
+    text-align: center;
+    background: coral;
+}
+
+#profile_input_login_id,
+#profile_input_login_name ,
+#profile_input_password ,
+#profile_input_full_name ,
+#profile_input_phonetic_name ,
+#profile_input_tel ,
+#profile_input_email {
+    width: 100%;
+    height: 100%;
+}
+#profile_flash {
+    color: red;
+    font-size: xx-large;
+    text-align: center;
+    padding-right: 280px;
+}
+/* Page Top
+========================================== */
+/*#contents p.page-top a {
+}*/
+
+/*#contents p.page-top a:hover {
+}*/

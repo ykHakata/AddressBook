@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* =======================================
+
+    footer CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.Footer Navi
+    2.Copyright
+========================================== */
+#footer {
+    padding: 10px 0px 10px 0px;
+    border-top: 5px solid coral;
+}
+
+
+
+/* 1.Footer Navi
+========================================== 
+
+/* 2.Copyright
+========================================== */
+#footer address#copyright {
+    font-size: medium ;
+    text-align: center;
+}

@@ -1,0 +1,43 @@
+% layout 'default';
+% title 'search';
+<script type="text/javascript" src="/js/all.js"></script>
+
+<!-- コンテンツ -->
+<div id="contents">
+
+  <div class="section" id="">
+    <h2>address book</h2>
+    <form method="post" action="">
+      <input type="text" name="word" class="">
+      <input type="submit" value="検索">
+    </form>
+
+  </div>
+
+% if ($address_detail->{id}) {
+  <div class="section" id="">
+    <hr>
+    <ul id="" class="" >
+    <li>id        : <%= $address_detail->{id} %></li>
+    <li>full_name : <%= $address_detail->{full_name} %></li>
+    <li>tel       : <%= $address_detail->{tel} %></li>
+    <li>mail      : <%= $address_detail->{mail} %></li>
+    <li>zip       : <%= $address_detail->{zip} %></li>
+    <li>pref      : <%= $address_detail->{pref} %></li>
+    <li>city      : <%= $address_detail->{city} %></li>
+    <li>below1    : <%= $address_detail->{below1} %></li>
+    <li>below2    : <%= $address_detail->{below2} %></li>
+    </ul>
+    <hr>
+  </div>
+% }
+
+  <div class="clear_address" id=""></div>
+
+<!-- /#contents --></div>
+
+
+
+
+
+

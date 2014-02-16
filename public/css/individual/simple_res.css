@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+/* =======================================
+
+    simple_res CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.
+    2.
+    
+========================================== */
+
+/* 1.
+========================================== */
+#simple_page {
+    background-color: white;
+    width: 640px;
+    margin: 0 auto;
+/*     padding-left: 20px; */
+/*     padding-right: 20px; */
+}
+#simple_header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+/*     margin-left: -20px; */
+    font-size: small;
+    text-align: center;
+    width: 640px;
+    border-top: 10px solid orange;
+    border-bottom: 3px solid orange;
+}
+#simple_content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#simple_footer {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 100px;
+    font-size: small;
+    text-align: center;
+    width: 640px;
+    border-top: 3px solid orange;
+    border-bottom: 10px solid orange;
+}
+/* 
+========================================== */
+#simple_studio_name h1{
+    text-align: center;
+    font-size: x-large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+#simple_studio_date {
+    float: left;
+/*     margin-left: 20px; */
+    font-size: x-large;
+    padding: 5px;
+/*     background-color: blue; */
+}
+
+#simple_studio_datetime {
+    float: right;
+/*     background-color: aqua; */
+}
+
+#simple_studio_start00 {
+    float: left;
+    border-left: 30px solid orange;
+/*     height: 30px; */
+    padding: 10px;
+}
+
+#simple_studio_start30 {
+    float: right;
+    border-left: 30px solid tan;
+/*     height: 30px; */
+    padding: 10px;
+}
+
+#simple_clear_fix {
+    clear: both;
+}
+
+#simple_table_res {
+/*     width: 600px; */
+/*     margin: 0 auto; */
+    font-size: x-small;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#simple_table_res table {
+    width: 100%;
+}
+
+#simple_table_res th {
+    text-align: center;
+/*     width: 50px; */
+/*     border: 1px solid black; */
+    height: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
+}
+
+
+#simple_table_res td {
+/*     text-align: center; */
+/*     width: 50px; */
+/*     border: 1px solid black; */
+    height: 20px;
+    vertical-align: middle;
+}
+
+.simple_table_res_td_start {
+    text-align: right;
+    border-bottom: 1px solid orange;
+    border-right: 1px solid orange;
+    width: 50px;
+}
+
+.simple_table_res_td_room {
+    text-align: center;
+    border-bottom: 1px solid orange;
+    border-right: 1px solid orange;
+/*     width: 80px; */
+}
+
+.simple_table_res_td_color {
+    background-color: whitesmoke;
+    
+    
+    
+}
+
+.simple_table_res_td_00 {
+    background-color: orange;
+}
+
+.simple_table_res_td_30 {
+    background-color: tan;
+}
+
+
+.simple_table_res_td_end {
+    text-align: left;
+    border-bottom: 1px solid orange;
+    width: 50px;
+}
+
+
+/* 
+========================================== */
+#simple_calender {
+
+    
+}
+
+.past_date_d {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.simple_calender_button {
+    background-color: ;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+/*     border: 1px solid blue; */
+}
+
+.simple_calender_button:hover {
+    cursor: pointer;
+/*     background-color: blue; */
+/*
+    background-color: ;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 1px solid blue;
+*/
+}
+
+
+#simple_calender table {
+/*      margin: 0 auto;  */
+    font-size: x-small;
+/*     border-color: orange; */
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+/*     border-right: 1px solid black; */
+     width: 100%; 
+}
+#simple_calender thead {
+/*     border-bottom: 1px solid black; */
+}
+#simple_calender th {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid orange;
+/*     height: 38px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#simple_calender .simple_calender_cap {
+    background-color: gold;
+    border-right: 1px solid white;
+}
+
+
+#simple_calender td {
+    text-align: center;
+    vertical-align: middle;
+/*     border-bottom: 1px solid black; */
+/*     width: 86px; */
+/*     height: 38px; */
+    border-bottom: 1px solid orange;
+    border-right: 1px solid orange;
+/*     width: 100%; */
+    width: 14%;
+/*
+    padding-top: 10px;
+    padding-bottom: 10px;
+*/
+}
+
+.sele {
+    background-color: orange;
+}
+
+#simple_calender a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+/*     background-color: blue; */
+}
+
+#simple_calender a:hover {
+/*     background-color: blue; */
+    background-color: gray;
+}
+
+

@@ -1,0 +1,11 @@
+% layout 'default';
+% title 'Welcome';
+<h2>ログインページを表示する仮画面</h2>
+
+<p>アカウントを作成</p>
+<form>
+  <p>メール<input type="text"></p>
+  <p>パスワード<input type="text"></p>
+  <input type="submit" value="入力">
+  
+</form>

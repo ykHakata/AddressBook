@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* Base
+========================================== */
+@import "base/reset.css";
+@import "base/structure.css";
+@import "base/header.css";
+@import "base/contents.css";
+@import "base/contents/preview.css";
+@import "base/contents/login.css";
+@import "base/footer.css";
+
+
+/* Parts
+========================================== */
+/* @import "parts/others.css"; */
+/* @import "parts/table.css"; */
+/* @import "parts/popup.css"; */
+
+/* Individual
+========================================== */
+/* @import "individual/index_contens.css"; */
+/* @import "individual/simple_res.css"; */

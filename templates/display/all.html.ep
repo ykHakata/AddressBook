@@ -1,0 +1,70 @@
+% layout 'default';
+% title 'all';
+<script type="text/javascript" src="/js/all.js"></script>
+
+<!-- コンテンツ -->
+<div id="contents">
+
+  <div class="section" id="">
+    <h2>すべてのアドレスブック</h2>
+        <p>
+      <%= flash 'message' %>
+    </p>
+
+    <h2>address book</h2>
+    <form>
+      <input type="text">
+      <input type="submit" value="検索">
+    </form>
+  </div>
+
+  <div class="section" id="">
+  <button type="button" class="all">All</button>
+  % for my $list (@$multiple_name_list) {
+    % if ($list->{caption}) {
+      <button type="button" class="cap_list"><%= $list->{caption} %></button>
+    % }
+  % }
+  </div>
+
+  <div  class="section" id="name_list">
+    <div><h3>名字、昇順</h3>
+      % for my $list (@$multiple_name_list) {
+      % if ($list->{caption}) {
+    </div>
+    <div id="cap_<%= $list->{caption} %>" class="cap_lists" >
+      <h1><%= $list->{caption} %></h1>
+      % }
+      <p><button type="button" class="caption_button" name="<%= $list->{id} %>"><%= $list->{full_name} %></button></p>
+      % }
+    </div>
+  </div>
+
+
+  <div class="section" id="address_detail">
+    <hr>
+    % for my $address (@$multiple_address_detail) {
+    <ul id="ul_<%= $address->{id} %>" class="address_detail" >
+    <li>id        : <%= $address->{id} %></li>
+    <li>full_name : <%= $address->{full_name} %></li>
+    <li>tel       : <%= $address->{tel} %></li>
+    <li>mail      : <%= $address->{mail} %></li>
+    <li>zip       : <%= $address->{zip} %></li>
+    <li>pref      : <%= $address->{pref} %></li>
+    <li>city      : <%= $address->{city} %></li>
+    <li>below1    : <%= $address->{below1} %></li>
+    <li>below2    : <%= $address->{below2} %></li>
+    </ul>
+    % }
+    <hr>
+  </div>
+
+  <div class="clear_address" id=""></div>
+
+<!-- /#contents --></div>
+
+
+
+
+
+

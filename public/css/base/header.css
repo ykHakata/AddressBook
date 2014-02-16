@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* =======================================
+
+    header CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.site_title
+    2.header_navi
+========================================== */
+#header {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 5px solid coral;
+}
+/* 1.site_title
+========================================== */
+/*
+#header h1#site_title {
+  font-size: x-large;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+*/
+
+/* 2.header_navi
+========================================== */
+#header ul#header_navi {
+/*   float: right; */
+  width: 100%;
+/*   text-align: center; */
+text-align: center;
+}
+
+#header ul#header_navi li {
+/*   display: inline; */
+  float: left;
+/*   border: 1px solid black; */
+/*   height: 100%; */
+/*   width: 10%; */
+/*   padding: 10px; */
+/*   margin-top: 30px */
+width: 10%;
+background-color: ;
+}
+#header ul#header_navi li a:link {
+  text-decoration: none;
+  color: black;
+}
+#header ul#header_navi li a:visited {
+  text-decoration: none;
+  color: black;
+}
+#header ul#header_navi li a:hover {
+/*   border-left: 10px solid lightgrey; */
+/*   border-bottom: 1px solid lightgrey; */
+  background-color: dimgray;
+  color: lightgrey;
+}
+
+
+
+
+
+
+
+
+
+
+#header div#header_clear {
+  clear: both;
+}

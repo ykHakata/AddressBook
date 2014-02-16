@@ -1,0 +1,19 @@
+% layout 'default';
+% title 'login';
+
+<!-- コンテンツ -->
+<div id="contents">
+
+  <form action="/login" method="post">
+  <!-- ログイン画面 -->
+  <div class="login_form" id="login">
+    <h2 id="login_title">address book ログイン</h2>
+    <label for="mail">メールアドレス</label>
+    <input type="text" name="mail" id="mail" value="" />
+    <label for="pass">パスワード</label>
+    <input type="text" name="pass" id="pass" value="" />
+    <button type="submit" id="login_submit">ログイン</button>
+  </div>
+  </form>
+
+</div>

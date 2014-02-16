@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* =======================================
+
+    preview CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.preview_title
+    2.navi_site
+    3.navi_site a:link, a:visited, a:hover
+========================================== */
+/* 1.preview_title
+========================================== */
+#contents .section #preview_title {
+  font-size: xx-large;
+  color: dimgray;
+  text-align: center;
+  font-weight: bold;
+}
+/* 2.navi_site
+========================================== */
+#contents #navi_site p {
+  display: none;
+}
+
+#contents #navi_site {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#contents #navi_site ul li {
+  padding-top: 10px;
+}
+
+#contents #navi_site ul li .commit{
+  font-size: x-small;
+}
+/* 3.navi_site a:link, a:visited, a:hover
+========================================== */
+#contents #navi_site ul li a:link,
+#contents #navi_site ul li a:visited {
+  display: block;
+  padding: 2px 2px 2px 0.5em;
+  border-left: 10px solid black;
+  border-bottom: 1px solid black;
+  color: dimgray;
+  text-decoration: none;
+}
+
+#contents #navi_site ul li a:hover {
+  border-left: 10px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  background-color: dimgray;
+  color: lightgrey;
+}

@@ -1,0 +1,15 @@
+% layout 'default';
+% title 'Welcome';
+<h2>アカウント作成を表示する仮画面</h2>
+
+<h2>address book 新規アカウント登録</h2>
+
+
+
+<form>
+  <p>メールアドレス<input type="text" name="example1"></p>
+  <p>パスワード<input type="text" >                 </p>
+  <p>名前   <input type="text" >                 </p>
+  <p>生年月日 <input type="text" >                 </p>
+<input type="submit" name="button1" value="登録">
+</form>

@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head><title><%= title %></title></head>
-  <body><%= content %></body>
+  <head>
+    <title><%= title %></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <%= stylesheet '/css/import.css' %>
+  </head>
+  <body>
+    <!-- 全体を指定 wrapper -->
+    <div id="wrapper">
+    <!-- ヘッター -->
+    <%= include 'header' %>
+    <%= content %>
+    <!-- フッター -->
+    <%= include 'footer' %>
+    <!-- /#wrapper --></div>
+  </body>
 </html>
