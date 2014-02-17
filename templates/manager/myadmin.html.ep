@@ -1,0 +1,8 @@
+% layout 'default';
+% title 'yoyakkuMyAdmin';
+<%# <script type="text/javascript" src="../js/manager/myadmin.js"></script> %>
+
+<!-- コンテンツ -->
+<div id="contents">
+<p>myadmin</p>
+</div>
