@@ -1,0 +1,40 @@
+% layout 'default';
+% title 'Welcome';
+
+<!-- コンテンツ -->
+<div id="contents">
+  <div class="section">
+    <h2 id="preview_title">サイト全体を表示する仮画面</h2>
+  </div>
+
+  <div class="section" id="navi_site">
+    <p>site_navigation:</p>
+    <ul>
+      <li><a href="/preview">全体表示(開発用)/preview &nbsp;<span class="commit">作業中・last_update/2013-12-14/オープニング追加</span></a></li>
+      <li><a href="/">オープニング検索画面/ &nbsp;<span class="commit">作業中・last_update/2013-12-14</span></a></li>
+      <li><a href="/login">ログイン/login &nbsp;<span class="commit">作業中・last_update/2013-12-14</span></a></li>
+      <li><a href="/logout">ログアウト/logout &nbsp;<span class="commit">作業中・last_update/2013-12-14/画面はなし</span></a></li>
+<!--       <li><a href="">ためしてみる(共用アドレス機能) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+      <li><a href="/all">すべてを表示/all &nbsp;<span class="commit">作業中・last_update/</span></a></li>
+<!--       <li><a href="/keyword">キーワード表示(ゲスト)/keyword &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="/icon">アイコン表示(ゲスト)/icon &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="">メンバー管理(ログイン) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="/member/create">アカウント新規作成(ゲスト)/member/create &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="">アカウント修正(ログイン) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="">アカウント削除(ログイン) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="">アドレスブック(共用、個人) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="/all">すべてを表示(ログイン)/all &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="/keyword">キーワード表示(ログイン)/keyword &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="/icon">アイコン表示(ログイン)/icon &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href="">新規入力(ログイン) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href=""> &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href=""> &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+<!--       <li><a href=""> &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
+
+    </ul>
+
+  </div>
+
+
+
+</div>

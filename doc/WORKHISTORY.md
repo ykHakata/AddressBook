@@ -24,6 +24,9 @@
     "[Manager]管理者向け機能(新規) 0002"
     基本要件を定義
 
+    "[Manager]管理者向け機能(Manager追加) 0002"
+    Managerひな形追加
+
 ## [AddressBook]ルート見直し 0003
     2014-02-18
     "[AddressBook]ルート見直し(不要箇所削除) 0003"
