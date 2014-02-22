@@ -65,3 +65,7 @@
             footer.css (フッター部分)
     ・ログイン画面動的なデザイン public/js/auth/login.js
 
+    "[Auth]ログイン機能(新規) 0004"
+    基本要件を定義
+
+
