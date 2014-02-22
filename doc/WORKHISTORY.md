@@ -71,4 +71,9 @@
     "[Auth]ログイン機能(ルート記述変更) 0004"
     login を auth/login  logout を auth/logout に変更
 
+    "[Auth]ログイン機能(FormValidator::Lite) 0004"
+    バリデート機能実装のため
+    FormValidator::Lite インストール carton install
+
+
 

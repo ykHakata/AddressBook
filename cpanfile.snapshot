@@ -281,6 +281,61 @@ DISTRIBUTIONS
       base 0
       strict 0
       warnings 0
+  Email-Valid-1.192
+    pathname: R/RJ/RJBS/Email-Valid-1.192.tar.gz
+    provides:
+      Email::Valid 1.192
+    requirements:
+      ExtUtils::MakeMaker 0
+      Mail::Address 0
+      Scalar::Util 0
+      Test::More 0
+      perl 5.006
+  Email-Valid-Loose-0.05
+    pathname: M/MI/MIYAGAWA/Email-Valid-Loose-0.05.tar.gz
+    provides:
+      Email::Valid::Loose 0.05
+    requirements:
+      Email::Valid 0.17
+      ExtUtils::MakeMaker 0
+      Test::More 0.32
+  FormValidator-Lite-0.37
+    pathname: T/TO/TOKUHIROM/FormValidator-Lite-0.37.tar.gz
+    provides:
+      FormValidator::Lite 0.37
+      FormValidator::Lite::Constraint undef
+      FormValidator::Lite::Constraint::Date undef
+      FormValidator::Lite::Constraint::Default undef
+      FormValidator::Lite::Constraint::Email undef
+      FormValidator::Lite::Constraint::File undef
+      FormValidator::Lite::Constraint::Japanese undef
+      FormValidator::Lite::Constraint::Number undef
+      FormValidator::Lite::Constraint::Time undef
+      FormValidator::Lite::Constraint::URL undef
+      FormValidator::Lite::Hash undef
+      FormValidator::Lite::Messages::en undef
+      FormValidator::Lite::Messages::ja undef
+      FormValidator::Lite::Upload undef
+      FormValidator::Lite::Upload::CGI undef
+      FormValidator::Lite::Upload::HTTPEngine undef
+      FormValidator::Lite::Upload::PlackRequest undef
+    requirements:
+      CGI 3.31
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Class::Accessor::Lite 0.05
+      Class::Load 0.11
+      Email::Valid 0
+      Email::Valid::Loose 0
+      ExtUtils::CBuilder 0
+      Filter::Util::Call 0
+      Module::Build 0.38
+      Scalar::Util 1.19
+      Test::Base::Less 0
+      Test::More 0.98
+      Test::Requires 0.05
+      YAML 0
+      perl 5.008001
   List-MoreUtils-0.33
     pathname: A/AD/ADAMK/List-MoreUtils-0.33.tar.gz
     provides:
@@ -290,6 +345,39 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.52
       Test::More 0.82
       perl 5.00503
+  MailTools-2.13
+    pathname: M/MA/MARKOV/MailTools-2.13.tar.gz
+    provides:
+      Mail undef
+      Mail::Address 2.13
+      Mail::Cap 2.13
+      Mail::Field 2.13
+      Mail::Field::AddrList 2.13
+      Mail::Field::Date 2.13
+      Mail::Field::Generic 2.13
+      Mail::Filter 2.13
+      Mail::Header 2.13
+      Mail::Internet 2.13
+      Mail::Mailer 2.13
+      Mail::Mailer::qmail 2.13
+      Mail::Mailer::rfc822 2.13
+      Mail::Mailer::sendmail 2.13
+      Mail::Mailer::smtp 2.13
+      Mail::Mailer::smtp::pipe 2.13
+      Mail::Mailer::smtps 2.13
+      Mail::Mailer::smtps::pipe 2.13
+      Mail::Mailer::testfile 2.13
+      Mail::Mailer::testfile::pipe 2.13
+      Mail::Send 2.13
+      Mail::Util 2.13
+    requirements:
+      Date::Format 0
+      Date::Parse 0
+      ExtUtils::MakeMaker 0
+      IO::Handle 0
+      Net::Domain 1.05
+      Net::SMTP 1.03
+      Test::More 0
   Module-Implementation-0.07
     pathname: D/DR/DROLSKY/Module-Implementation-0.07.tar.gz
     provides:
@@ -627,6 +715,69 @@ DISTRIBUTIONS
       Test::Requires 0
       Time::HiRes 0
       perl 5.008
+  Text-TestBase-0.12
+    pathname: T/TO/TOKUHIROM/Text-TestBase-0.12.tar.gz
+    provides:
+      Data::Section::TestBase 0.12
+      Test::Base::Less 0.12
+      Text::TestBase 0.12
+      Text::TestBase::Block undef
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Class::Accessor::Lite 0.05
+      Digest::MD5 0
+      Exporter 0
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Test::Builder::Module 0
+      Test::More 0.98
+      Test::Requires 0
+      parent 0
+      perl 5.008001
+  TimeDate-2.30
+    pathname: G/GB/GBARR/TimeDate-2.30.tar.gz
+    provides:
+      Date::Format 2.24
+      Date::Format::Generic 2.24
+      Date::Language 1.10
+      Date::Language::Afar 0.99
+      Date::Language::Amharic 1.00
+      Date::Language::Austrian 1.01
+      Date::Language::Brazilian 1.01
+      Date::Language::Bulgarian 1.01
+      Date::Language::Chinese 1.00
+      Date::Language::Chinese_GB 1.01
+      Date::Language::Czech 1.01
+      Date::Language::Danish 1.01
+      Date::Language::Dutch 1.02
+      Date::Language::English 1.01
+      Date::Language::Finnish 1.01
+      Date::Language::French 1.04
+      Date::Language::Gedeo 0.99
+      Date::Language::German 1.02
+      Date::Language::Greek 1.00
+      Date::Language::Hungarian 1.01
+      Date::Language::Icelandic 1.01
+      Date::Language::Italian 1.01
+      Date::Language::Norwegian 1.01
+      Date::Language::Oromo 0.99
+      Date::Language::Romanian 1.01
+      Date::Language::Russian 1.01
+      Date::Language::Russian_cp1251 1.01
+      Date::Language::Russian_koi8r 1.01
+      Date::Language::Sidama 0.99
+      Date::Language::Somali 0.99
+      Date::Language::Spanish 1.00
+      Date::Language::Swedish 1.01
+      Date::Language::Tigrinya 1.00
+      Date::Language::TigrinyaEritrean 1.00
+      Date::Language::TigrinyaEthiopian 1.00
+      Date::Language::Turkish 1.0
+      Date::Parse 2.30
+      Time::Zone 2.24
+    requirements:
+      ExtUtils::MakeMaker 0
   Try-Tiny-0.18
     pathname: D/DO/DOY/Try-Tiny-0.18.tar.gz
     provides:
@@ -639,3 +790,36 @@ DISTRIBUTIONS
       constant 0
       strict 0
       warnings 0
+  YAML-0.90
+    pathname: I/IN/INGY/YAML-0.90.tar.gz
+    provides:
+      Spiffy 0.31
+      Test::Base::Filter undef
+      Test::YAML 0.90
+      Test::YAML::Filter 0.90
+      YAML 0.90
+      YAML::Any 0.90
+      YAML::Dumper 0.90
+      YAML::Dumper::Base 0.90
+      YAML::Error 0.90
+      YAML::Loader 0.90
+      YAML::Loader::Base 0.90
+      YAML::Marshall 0.90
+      YAML::Mo 0.90
+      YAML::Node 0.90
+      YAML::Tag 0.90
+      YAML::Type::blessed 0.90
+      YAML::Type::code 0.90
+      YAML::Type::glob 0.90
+      YAML::Type::ref 0.90
+      YAML::Type::regexp 0.90
+      YAML::Type::undef 0.90
+      YAML::Types 0.90
+      YAML::Warning 0.90
+      t::Base undef
+      t::TestYAML undef
+      yaml_mapping 0.90
+      yaml_scalar 0.90
+      yaml_sequence 0.90
+    requirements:
+      ExtUtils::MakeMaker 6.30
