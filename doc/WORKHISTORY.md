@@ -11,6 +11,10 @@
     作業履歴 WORKHISTORY.mdを新設
     Markdown形式にて履歴保存、gitコミットの詳細を記録
 
+    2014-02-22
+    "資料の整備(README.md) 0001"
+    README.mdを更新
+
 ## [Manager]管理者向け機能 0002
     2014-02-17
     要件
