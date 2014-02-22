@@ -42,12 +42,12 @@
     ・基本的にどこの画面でもヘッダーの右上にログインが見れるようにする
 
     ・ログイン機能 lib/AddressBook/Auth.pm
-        ・ルート /autn/login
+        ・ルート /auth/login
             ・Auth.pmのsub login {}を実行
             ・dbのadminテーブルに存在確認
             ・認証が許可 セッションに書き込み 画面トップに遷移
             ・認証に失敗 ログイン画面表示
-        ・ルート /autn/logout
+        ・ルート /auth/logout
             ・Auth.pmのsub logout {}を実行
             ・セッションを破棄して画面トップに遷移 専用画面なし
 
@@ -67,5 +67,8 @@
 
     "[Auth]ログイン機能(新規) 0004"
     基本要件を定義
+
+    "[Auth]ログイン機能(ルート記述変更) 0004"
+    login を auth/login  logout を auth/logout に変更
 
 

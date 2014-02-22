@@ -12,8 +12,8 @@
     <ul>
       <li><a href="/preview">全体表示(開発用)/preview &nbsp;<span class="commit">作業中・last_update/2013-12-14/オープニング追加</span></a></li>
       <li><a href="/">オープニング検索画面/ &nbsp;<span class="commit">作業中・last_update/2013-12-14</span></a></li>
-      <li><a href="/login">ログイン/login &nbsp;<span class="commit">作業中・last_update/2013-12-14</span></a></li>
-      <li><a href="/logout">ログアウト/logout &nbsp;<span class="commit">作業中・last_update/2013-12-14/画面はなし</span></a></li>
+      <li><a href="/auth/login">ログイン/auth/login &nbsp;<span class="commit">作業中・last_update/2013-12-14</span></a></li>
+      <li><a href="/auth/logout">ログアウト/auth/logout &nbsp;<span class="commit">作業中・last_update/2013-12-14/画面はなし</span></a></li>
 <!--       <li><a href="">ためしてみる(共用アドレス機能) &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
       <li><a href="/all">すべてを表示/all &nbsp;<span class="commit">作業中・last_update/</span></a></li>
 <!--       <li><a href="/keyword">キーワード表示(ゲスト)/keyword &nbsp;<span class="commit">作業中・last_update/</span></a></li> -->
