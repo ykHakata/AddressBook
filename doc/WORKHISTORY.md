@@ -75,5 +75,5 @@
     バリデート機能実装のため
     FormValidator::Lite インストール carton install
 
-
-
+    "[Auth]ログイン機能(バリデート原型) 0004"
+    バリデートの原型、postリクエストのみに対応
