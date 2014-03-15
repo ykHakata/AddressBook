@@ -81,3 +81,7 @@
     "[Auth]ログイン機能(HTML::FillInForm) 0004"
     フィルイン機能実装のため
     HTML::FillInForm インストール carton install
+
+    "[Auth]ログイン機能(API/Auth.pm実装) 0004"
+    フィルイン機能実装
+    バリデート機能改訂(エラーメッセージ表示)

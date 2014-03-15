@@ -2,6 +2,7 @@ package AddressBook::Auth;
 use Mojo::Base 'Mojolicious::Controller';
 use Readonly;
 use FormValidator::Lite qw{Email};
+use HTML::FillinForm;
 use Data::Dumper;
 sub login {
     my $self = shift;
@@ -10,8 +11,12 @@ sub login {
     if (defined $self->session->{name}) {
         return $self->redirect_to('/');
     }
-    # バリデートの為の改訂
-    # postリクエストのみ,getの場合は無視
+    my $res = +{
+        mail => undef,
+        pass => undef,
+        message => undef,
+    };
+    # postリクエストのみ,getは無視
     if (uc $self->req->method eq 'POST') {
         # パラメーターを全て取得
         my $params = $self->req->params->to_hash;
@@ -24,16 +29,21 @@ sub login {
         );
         # バリデータ不合格の処置
         if ($validator->has_error) {
-            # $self->stash(
-            #     errors => Dumper($validator->errors()),
-            # );
-            # my $html = $self->render(template => 'auth/admin_login', partial => 1)->to_string;
-            # $html = HTML::FillInForm->fill(\$html, $params,);
-            # return $self->render(template => 'auth/admin_login', text => $html , format => 'html');
-            # 開発中につきコンソールにwarnでメッセージ吐き出し
-            # エラー内容を吐き出す 
-            warn "error! validator!! : " . Dumper($validator->errors());
-            return $self->render(template => 'auth/login');
+
+            $self->stash(message => Dumper($validator->errors()),);
+
+            my $html = $self->render(
+                template => 'auth/login',
+                partial => 1,
+            )->to_string;
+
+            $html = HTML::FillInForm->fill(\$html, $params,);
+
+            return $self->render(
+                template => 'auth/admin_login',
+                text => $html,
+                format => 'html'
+            );
         }
         # バリデータ合格の処置 存在確認
         my $admin = $model->single('admin', +{
@@ -43,24 +53,31 @@ sub login {
         # 存在の場合、セッション書き込みトップ画面遷移
         if (defined $admin) {
             $self->session(+{
+                mail => $admin->mail,
                 name => $admin->name,
             });
             return $self->redirect_to('/');
         }
-        else {
-        # 存在しない場合、エラーメッセージ表示
-            # $self->stash(
-            # errors => '存在しません',
-            # );
-            # my $html = $self->render(template => 'auth/admin_login', partial => 1)->to_string;
-            # $html = HTML::FillInForm->fill(\$html, $params);
-            # return $self->render(template => 'auth/admin_login', text => $html, format => 'html');
-            # 開発中につきwarnでメッセージ吐き出し
-            warn "error! Not exist!!";
-            return $self->render(template => 'auth/login');
+        else { # 存在しない場合、メッセージ
+
+            $self->stash(message => 'Not exist!',);
+
+            my $html = $self->render(
+                template => 'auth/login',
+                partial => 1
+            )->to_string;
+
+            $html = HTML::FillInForm->fill(\$html, $params);
+
+            return $self->render(
+                template => 'auth/login',
+                text => $html,
+                format => 'html',
+            );
         }
     }
 
+    $self->stash(message => $res->{message},);
     return $self->render(template => 'auth/login');
 }
 
