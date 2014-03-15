@@ -46,12 +46,12 @@
     ・基本的にどこの画面でもヘッダーの右上にログインが見れるようにする
 
     ・ログイン機能 lib/AddressBook/Auth.pm
-        ・ルート /autn/login
+        ・ルート /auth/login
             ・Auth.pmのsub login {}を実行
             ・dbのadminテーブルに存在確認
             ・認証が許可 セッションに書き込み 画面トップに遷移
             ・認証に失敗 ログイン画面表示
-        ・ルート /autn/logout
+        ・ルート /auth/logout
             ・Auth.pmのsub logout {}を実行
             ・セッションを破棄して画面トップに遷移 専用画面なし
 
@@ -69,3 +69,28 @@
             footer.css (フッター部分)
     ・ログイン画面動的なデザイン public/js/auth/login.js
 
+    "[Auth]ログイン機能(新規) 0004"
+    基本要件を定義
+
+    "[Auth]ログイン機能(ルート記述変更) 0004"
+    login を auth/login  logout を auth/logout に変更
+
+    "[Auth]ログイン機能(FormValidator::Lite) 0004"
+    バリデート機能実装のため
+    FormValidator::Lite インストール carton install
+
+    "[Auth]ログイン機能(バリデート原型) 0004"
+    バリデートの原型、postリクエストのみに対応
+
+    "[Auth]ログイン機能(HTML::FillInForm) 0004"
+    フィルイン機能実装のため
+    HTML::FillInForm インストール carton install
+
+    "[Auth]ログイン機能(API/Auth.pm実装) 0004"
+    フィルイン機能実装
+    バリデート機能改訂(エラーメッセージ表示)
+
+    "[Auth]ログイン機能(HTML,CSS/改訂) 0004"
+    ヘッダーナビ表示位置調整
+    ログイン時に「さん」をつける
+    エラーメッセージを強調

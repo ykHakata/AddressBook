@@ -2,17 +2,21 @@
 <div id="header">
   <!-- ヘッターナビ -->
   <ul id="header_navi">
-    <li id="" class=""><a href="/preview">(開発用)</a></li>
     % if (session 'name') {
     <li id="" class=""><a href="/all">すべて表示</a></li>
     <li id="" class=""><a href="">キーワード</a></li>
     <li id="" class=""><a href="">アイコン</a></li>
     <li id="" class=""><a href="">新規</a></li>
-    <li id="" class=""><a href="/logout"><%= session 'name' %></a></li>
+    <li id="" class=""><a href="/preview">(開発用)</a></li>
+    <li id="" class=""><a href="/auth/logout"><%= session 'name' %></a>さん</li>
     % }
     % else {
     <li id="" class=""><a href="">ためしてみる</a></li>
-    <li id="" class=""><a href="/login">login</a></li>
+    <li id="" class=""><a href=""></a>&nbsp;</li>
+    <li id="" class=""><a href=""></a>&nbsp;</li>
+    <li id="" class=""><a href=""></a>&nbsp;</li>
+    <li id="" class=""><a href="/preview">(開発用)</a></li>
+    <li id="" class=""><a href="/auth/login">login</a></li>
     % }
   </ul>
   <div id="header_clear"></div>

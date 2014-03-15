@@ -20,9 +20,9 @@ sub startup {
     $r->route('/preview')->to(controller => 'Preview', action => 'list');
     # オープニング検索
     $r->route('/')->to(controller => 'Display', action => 'search');
-
-    $r->route('/login')->to(controller => 'Auth', action => 'login');
-    $r->route('/logout')->to(controller => 'Auth', action => 'logout');
+    # [Auth]ログイン機能
+    $r->route('/auth/login')->to(controller => 'Auth', action => 'login');
+    $r->route('/auth/logout')->to(controller => 'Auth', action => 'logout');
 
     $r->route('/all')->to(controller => 'Display', action => 'all');
 }

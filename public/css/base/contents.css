@@ -8,7 +8,7 @@
     INDEX
  -----------------------------------------
     1.preview
-    2.login
+    2.auth
 ========================================== */
 #contents {
   border: 1px solid black;
@@ -16,7 +16,7 @@
 }
 /* 1.preview /contents/preview.css 参照
 ========================================== */
-/* 2.login /contents/login.css 参照
+/* 2.auth /contents/auth.css 参照
 ========================================== */
 #contents #name_list {
   float: left;

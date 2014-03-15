@@ -4,10 +4,11 @@
 <!-- コンテンツ -->
 <div id="contents">
 
-  <form action="/login" method="post">
+  <form action="/auth/login" method="post">
   <!-- ログイン画面 -->
   <div class="login_form" id="login">
     <h2 id="login_title">address book ログイン</h2>
+    <p id="message"><%= $message %></p>
     <label for="mail">メールアドレス</label>
     <input type="text" name="mail" id="mail" value="" />
     <label for="pass">パスワード</label>
