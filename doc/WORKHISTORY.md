@@ -77,3 +77,7 @@
 
     "[Auth]ログイン機能(バリデート原型) 0004"
     バリデートの原型、postリクエストのみに対応
+
+    "[Auth]ログイン機能(HTML::FillInForm) 0004"
+    フィルイン機能実装のため
+    HTML::FillInForm インストール carton install
