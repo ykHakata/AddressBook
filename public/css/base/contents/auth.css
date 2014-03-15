@@ -19,6 +19,15 @@
   font-weight: bold;
 }
 
+#contents #login #message {
+  font-size: large;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  background-color: pink;
+  margin-top: 10px;
+}
+
 #contents #select_login #admin_login_button {
   display: block;
   font-size: xx-large;

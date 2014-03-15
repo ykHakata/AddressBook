@@ -27,14 +27,15 @@
 
 /* 2.header_navi
 ========================================== */
-#header ul#header_navi {
+#header #header_navi {
 /*   float: right; */
   width: 100%;
 /*   text-align: center; */
+background-color: ;
 text-align: center;
 }
 
-#header ul#header_navi li {
+#header #header_navi li {
 /*   display: inline; */
   float: left;
 /*   border: 1px solid black; */
@@ -42,7 +43,7 @@ text-align: center;
 /*   width: 10%; */
 /*   padding: 10px; */
 /*   margin-top: 30px */
-width: 10%;
+width: 16.66%;
 background-color: ;
 }
 #header ul#header_navi li a:link {
