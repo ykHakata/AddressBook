@@ -9,6 +9,7 @@
  -----------------------------------------
     1.preview
     2.auth
+    3.setting
 ========================================== */
 #contents {
   border: 1px solid black;
@@ -17,6 +18,8 @@
 /* 1.preview /contents/preview.css 参照
 ========================================== */
 /* 2.auth /contents/auth.css 参照
+========================================== */
+/* 3.auth /contents/setting.css 参照
 ========================================== */
 #contents #name_list {
   float: left;

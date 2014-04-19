@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'account_edit';
+
+<!-- コンテンツ -->
+<div id="contents">
+
+account_edit
+
+</div>

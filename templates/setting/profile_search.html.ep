@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'profile_search';
+
+<!-- コンテンツ -->
+<div id="contents">
+
+profile_search
+
+</div>

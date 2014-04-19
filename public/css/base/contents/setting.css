@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* =======================================
+
+    setting CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    1.setting_title
+========================================== */
+/* 1.setting_title
+========================================== */
+#contents .section #setting_title {
+  font-size: xx-large;
+  color: dimgray;
+  text-align: center;
+  font-weight: bold;
+}

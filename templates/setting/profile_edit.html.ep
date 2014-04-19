@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'profile_edit';
+
+<!-- コンテンツ -->
+<div id="contents">
+
+profile_edit
+
+</div>

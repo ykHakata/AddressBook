@@ -94,3 +94,39 @@
     ヘッダーナビ表示位置調整
     ログイン時に「さん」をつける
     エラーメッセージを強調
+
+## [Setting]設定機能 0005
+    2014-03-15
+    要件
+    ・各種機能を設定する機能を新設
+    ・アカウント管理(新規 変更 削除 表示)
+    ・プロフィール管理(新規 変更 削除 表示)
+
+    ・設定機能 lib/AddressBook/Setting.pm
+        ・ルート /setting/account_edit
+        ・ルート /setting/account_search
+
+        ・ルート /setting/profile_edit
+        ・ルート /setting/profile_search
+
+    ・アカウント画面
+        templates/setting/account_edit.html.ep
+        templates/setting/account_search.html.ep
+
+    ・プロフィール画面
+        templates/setting/profile_edit.html.ep
+        templates/setting/profile_search.html.ep
+
+    ・設定画面デザイン public/css/contents/setting.css
+    ・共通
+        import.css (読み込み設定)
+        reset.css (初期値)
+        structure (基本レイアウト)
+        header.css (ヘッダー部分)
+        footer.css (フッター部分)
+
+    ・アカウント画面動的なデザイン public/js/setting/account.js
+    ・プロフィール画面動的なデザイン public/js/setting/profile.js
+
+    "[Setting]設定機能(新規) 0005"
+    基本要件と各種ファイル準備

@@ -23,6 +23,11 @@ sub startup {
     # [Auth]ログイン機能
     $r->route('/auth/login')->to(controller => 'Auth', action => 'login');
     $r->route('/auth/logout')->to(controller => 'Auth', action => 'logout');
+    # [Setting]設定機能
+    $r->route('/setting/account_edit')->to(controller => 'Setting', action => 'account_edit');
+    $r->route('/setting/account_search')->to(controller => 'Setting', action => 'account_search');
+    $r->route('/setting/profile_edit')->to(controller => 'Setting', action => 'profile_edit');
+    $r->route('/setting/profile_search')->to(controller => 'Setting', action => 'profile_search');
 
     $r->route('/all')->to(controller => 'Display', action => 'all');
 }

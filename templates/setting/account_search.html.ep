@@ -1,0 +1,9 @@
+% layout 'default';
+% title 'account_search';
+
+<!-- コンテンツ -->
+<div id="contents">
+
+account_search
+
+</div>
