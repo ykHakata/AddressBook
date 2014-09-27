@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <%= stylesheet '/css/import.css' %>
-  </head>
-  <body>
-    <!-- 全体を指定 wrapper -->
-    <div id="wrapper">
-    <!-- ヘッター -->
-    <%= include 'header' %>
+</head>
+<body>
+<!-- 全体を指定 wrapper -->
+<div id="wrapper">
+
+<!-- ヘッダー -->
+<div id="header">
+    <!-- ヘッダーナビゲーション -->
+    <div class="sectionHeaderNavi">
+    <ul id="headerNavi">
+        <li id="" class="button"><button type="button">アカウントを作成</button></li>
+    </ul>
+    <!-- /.sectionHeaderNavi --></div>
+    <div class="clearFix"></div>
+<!-- /#header --></div>
+
     <%= content %>
-    <!-- フッター -->
-    <%= include 'footer' %>
-    <!-- /#wrapper --></div>
-  </body>
+
+<div id="footer">
+    <address id="copyright">Copyright (C) ADDRESSBOOK Inc. All Rights Reserver.</address>
+<!-- /#footer --></div>
+<!-- /#wrapper --></div>
+</body>
 </html>
+

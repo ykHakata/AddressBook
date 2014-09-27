@@ -1,20 +1,27 @@
 % layout 'default';
-% title 'login';
+% title 'addressbook/login';
 
 <!-- コンテンツ -->
 <div id="contents">
 
-  <form action="/auth/login" method="post">
-  <!-- ログイン画面 -->
-  <div class="login_form" id="login">
-    <h2 id="login_title">address book ログイン</h2>
-    <p id="message"><%= $message %></p>
-    <label for="mail">メールアドレス</label>
-    <input type="text" name="mail" id="mail" value="" />
-    <label for="pass">パスワード</label>
-    <input type="text" name="pass" id="pass" value="" />
-    <button type="submit" id="login_submit">ログイン</button>
-  </div>
-  </form>
-
+<!-- サイトタイトル -->
+<div class="section">
+    <h1 id="siteTitle">address book</h1>
 </div>
+
+<!-- ログインフォーム -->
+<form method="post" action="">
+
+<div class="sectionForm">
+    <p id="inputMail"><label>メールアドレス：<input type="email" name="mail" size="20" maxlength="20" required></label></p>
+    <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input type="password" name="pass" size="20" maxlength="4" required></label></p>
+</div>
+
+<!-- ログイン実行ボタン -->
+<div class="sectionSubmit">
+    <p id="inputSubmit"><input type="submit" value="実行"></p>
+</div>
+
+</form>
+
+<!-- /#contents --></div>
