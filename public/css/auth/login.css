@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* =======================================
+
+    auth/login CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    siteTitle
+========================================== */
+
+/* siteTitle
+========================================== */
+#contents .section #siteTitle {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 50px;
+}
+
+#contents .sectionForm {
+    margin-top: 50px;
+    text-align: center;
+    font-size: medium;
+}
+
+#contents .sectionForm #inputMail {
+    margin-bottom: 10px;
+}
+
+#contents .sectionSubmit {
+    margin-top: 50px;
+    text-align: center;
+    font-size: small;
+}
+
+#contents .sectionSubmit #inputSubmit {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+#contents #login #login_title {
+  /*font-size: xx-large;*/
+  /*color: dimgray;*/
+  /*text-align: center;*/
+  /*font-weight: bold;*/
+}
+
+#contents #login #message {
+  /*font-size: large;*/
+  /*color: red;*/
+  /*text-align: center;*/
+  /*font-weight: bold;*/
+  /*background-color: pink;*/
+  /*margin-top: 10px;*/
+}
+
+#contents #select_login #admin_login_button {
+  /*display: block;*/
+  /*font-size: xx-large;*/
+  /*color: dimgray;*/
+  /*text-align: center;*/
+  /*font-weight: bold;*/
+  /*margin-top: 50px;*/
+  /*margin-bottom: 50px;*/
+  /*width: 100%;*/
+}
+
+
+#contents #login #login_submit {
+  /*display: block;*/
+  /*font-size: xx-large;*/
+  /*color: dimgray;*/
+  /*text-align: center;*/
+  /*font-weight: bold;*/
+  /*margin-top: 50px;*/
+  /*margin-bottom: 50px;*/
+  /*width: 100%;*/
+}
+
+#contents #login label {
+  /*display: block;*/
+  /*width: 30%;*/
+  /*margin-top: 30px;*/
+  /*padding: 10px;*/
+  /*border: solid gray;*/
+  /*border-width: 1px 2px 2px 1px;*/
+  /*background-color: lightgrey;*/
+  /*font-size: large;*/
+  /*text-align: center;*/
+}
+
+#contents #login input {
+  /*display: block;*/
+  /*width: 100%;*/
+  /*margin-bottom: 10px;*/
+  /*border: solid gray;*/
+  /*border-width: 1px 3px 3px 1px;*/
+  /*font-size: xx-large;*/
+}
+

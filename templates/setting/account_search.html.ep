@@ -6,4 +6,19 @@
 
 account_search
 
+
+% for my $account (@{$account_hash}) {
+
+
+<p>  id    : <%= $account->{id} %></p>
+<p>  name  : <%= $account->{name} %></p>
+<p>  mail  : <%= $account->{mail} %></p>
+<p>  password  : <%= $account->{password} %></p>
+<p>  delete_flag   : <%= $account->{delete_flag} %></p>
+<p>  create_on     : <%= $account->{create_on} %></p>
+<p>  modify_on     : <%= $account->{modify_on} %></p>
+
+% }
+
+
 </div>

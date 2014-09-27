@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* =======================================
+
+    header CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    headerNavi
+========================================== */
+#header {
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+/* headerNavi
+========================================== */
+#header #headerNavi {
+   text-align: right; 
+}
+
+#header #headerNavi li {
+   display: inline; 
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* =======================================
+
+    footer CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    copyright
+========================================== */
+#footer {
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+/* copyright
+========================================== */
+#footer #copyright {
+    font-size: medium;
+    text-align: center;
+}
