@@ -8,13 +8,15 @@
 <div class="section">
     <h1 id="siteTitle">address book</h1>
 </div>
-
+<p> <%= stash->{message} %> </p>
 <!-- ログインフォーム -->
-<form method="post" action="">
+<form method="post" action="/auth/login">
 
 <div class="sectionForm">
-    <p id="inputMail"><label>メールアドレス：<input type="email" name="mail" size="20" maxlength="20" required></label></p>
-    <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input type="password" name="pass" size="20" maxlength="4" required></label></p>
+    <%# <p id="inputMail"><label>メールアドレス：<input type="email" name="mail" size="20" maxlength="20" required></label></p> %>
+    <%# <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input type="password" name="pass" size="20" maxlength="4" required></label></p> %>
+    <p id="inputMail"><label>メールアドレス：<input  name="mail" size="20" maxlength="20" ></label></p>
+    <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input  name="pass" size="20" maxlength="4" ></label></p>
 </div>
 
 <!-- ログイン実行ボタン -->

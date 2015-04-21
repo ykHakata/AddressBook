@@ -8,6 +8,64 @@ use Data::Dumper;
 sub login {
     my $self = shift;
 
+    return $self->render(template => 'auth/login')
+        if (uc $self->req->method ne 'POST');
+
+    # バリデータ
+    my $params = $self->req->params->to_hash;
+    # バリデータのインスタンスを作成
+    my $validator = FormValidator::Lite->new($self->req);
+    # 入力値の存在確認
+    my $res = $validator->check(
+        mail => ['REQUIRED', 'NOT_NULL'],
+        # pass => ['REQUIRED', 'NOT_NULL'],
+    );
+
+    $validator->set_message('mail.required' => 'メールアドレスを入力');
+    # $validator->set_message("$param.$func" => $message)
+
+
+    # バリデータ不合格の処置
+    if ($validator->has_error) {
+
+    # my $hoge = 'mese';
+    # my ($hoge) = $validator->get_error_messages(mail => 'required');
+    my ($hoge) = $validator->get_error_messages();
+
+    # die Dumper $validator->get_error_messages();
+        # $self->stash(message => Dumper($validator->errors()),);
+        $self->stash(message => $hoge);
+
+    # die Dumper $validator->get_error_messages(mail => 'required');
+
+    # my $self->stash(message => $hoge);
+
+
+
+        my $html = $self->render(
+            template => 'auth/login',
+            partial => 1,
+        )->to_string;
+
+        $html = HTML::FillInForm->fill(\$html, $params,);
+
+        return $self->render(
+            template => 'auth/admin_login',
+            text     => $html,
+            format   => 'html',
+        );
+    }
+
+    # die "login In development!!";
+    # die "login In development!!";
+
+
+
+
+
+
+
+
     # my $model = $self->model;
     # # ログイン確認
     # if (defined $self->session->{name}) {
