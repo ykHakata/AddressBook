@@ -1,6 +1,6 @@
-requires 'Mojolicious', '4.47';
-requires 'Teng', '0.20';
-requires 'DBD::SQLite', '1.40';
-requires 'Readonly', '1.03'; 
-requires 'FormValidator::Lite', '0.37'; 
-requires 'HTML::FillInForm', '2.20'; 
+requires 'Mojolicious';
+requires 'Teng';
+requires 'DBD::SQLite';
+requires 'Readonly';
+requires 'FormValidator::Lite';
+requires 'HTML::FillInForm';
