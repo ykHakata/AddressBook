@@ -32,11 +32,8 @@
           <a class="navbar-brand" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav">
-            <li><a href="/tutorial.html" data-toggle="tooltip" data-placement="bottom" title="アドレスブックの機能を体験できます">ためしてみる</a></li>
-          </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login.html" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します">ログイン</a></li>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="新規アカウント画面へ移動します">アカウントを作成</a></li>
           </ul>
         </div>
       </div>
@@ -46,13 +43,20 @@
         <fieldset>
           <legend class="text-center h1">address book</legend>
           <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
             <div class="col-lg-10">
-              <input type="text" class="form-control input-lg" id="inputWord" placeholder="Keyword">
+              <input type="text" class="form-control input-lg" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+              <input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password">
             </div>
           </div>
           <div class="form-group text-center">
             <div class="col-lg-10 col-lg-offset-2">
-              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="フリーワード検索"><span class="glyphicon glyphicon-inbox"></span> Search</button>
+              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="ログインします"><span class="glyphicon glyphicon-inbox"></span> Login</button>
             </div>
           </div>
         </fieldset>
@@ -70,7 +74,7 @@
 </body>
 
 </html>
-<!-- トップページ -->
-<!-- ログインをクリックするとログイン画面へ遷移 -->
-<!-- ためしてみるをクリックすると体験ページへ遷移 -->
-<!-- Keyword フォームに入力して Search 実行すると該当する公開していい住所が表示 -->
+<!-- ログインページ -->
+<!-- アカウント作成をクリックすると新規アカウント登録画面へ遷移 -->
+<!-- 登録メルアド パスワードを入力後 実行を押すとログイン後のトップページへ遷移 -->
+<!-- 入力値が正しくない場合、入力値をフォームにフィルインして再度入力を要求 -->
