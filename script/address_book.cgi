@@ -9,4 +9,4 @@ BEGIN { unshift @INC, "$FindBin::Bin/../local/lib/perl5" }
 
 # Start command line interface for application
 require Mojolicious::Commands;
-Mojolicious::Commands->start_app('AddressBook');
+Mojolicious::Commands->start_app('AddressBook')->mode('cgi');
