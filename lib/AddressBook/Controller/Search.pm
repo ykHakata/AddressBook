@@ -7,6 +7,13 @@ use Data::Dumper;
 sub index {
     my $self = shift;
 
+    my $url_path   = q{/search};
+    my $url_public = '';
+        if ( $self->app->mode ne 'local' ) {
+        $url_path   = q{/AddressBook/script/address_book.cgi} . $url_path;
+        $url_public = q{/AddressBook/public};
+    }
+
     my $params = $self->req->params->to_hash;
     my @words = split '', $params->{q};
 
@@ -18,6 +25,9 @@ sub index {
 
     $self->stash( search_list => $search_list );
     $self->stash( pager       => $pager );
+    $self->stash( url_path    => $url_path );
+    $self->stash( q           => $params->{q} );
+    $self->stash( url_public  => $url_public );
 
     my $html = $self->render_to_string->to_string;
     my $output = HTML::FillInForm->fill( \$html, $params );
@@ -27,7 +37,7 @@ sub index {
 
 # 出力する検索結果のデーター構造作成
 sub create_search_list {
-    my $self = shift;
+    my $self  = shift;
     my $words = shift;
     my $pager = shift;
 
@@ -35,7 +45,7 @@ sub create_search_list {
     my $count     = $pager->entries_per_page;
     my $count_row = 0;
 
-    for my $word (@{$words}) {
+    for my $word ( @{$words} ) {
         push @{ $word_data->[$count_row] }, $word;
         $count -= 1;
         if ( !$count ) {
@@ -52,10 +62,10 @@ sub create_search_list {
 
 # ページャーオブジェクト作成
 sub create_pager {
-    my $self  = shift;
-    my $words = shift;
-    my $params  = shift;
-    my $page = $params->{page};
+    my $self   = shift;
+    my $words  = shift;
+    my $params = shift;
+    my $page   = $params->{page};
 
     # ページャーオブジェクト
     my $pager = Data::Page->new();

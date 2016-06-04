@@ -8,14 +8,8 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>AddressBook</title>
   <!-- Bootstrap -->
-  % if ( app->mode eq 'cgi' ) {
-  <link href="/AddressBook/script/address_book.cgi/public/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/AddressBook/script/address_book.cgi/public/bootstrap-3.3.6-dist/css/simplex/bootstrap.min.css" rel="stylesheet">
-  % }
-  % else {
-  <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-3.3.6-dist/css/simplex/bootstrap.min.css" rel="stylesheet">
-  % }
+  <link href="<%= $url_public %>/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%= $url_public %>/bootstrap-3.3.6-dist/css/simplex/bootstrap.min.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -48,7 +42,7 @@
       </div>
     </nav>
     <div class="well">
-      <form class="form-horizontal" method="get" action="/search">
+      <form class="form-horizontal" method="get" action="<%= $url_path %>">
         <fieldset>
           <legend class="text-center h1">address book</legend>
           <div class="form-group">
@@ -100,7 +94,7 @@
         <li class="disabled"><a>&laquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_with->query([page => $pager->previous_page]); %>">&laquo;</a></li>
+        <li class=""><a href="<%= url_for($url_path)->query([q => $q, page => $pager->previous_page]); %>">&laquo;</a></li>
       % }
 
       <!-- ページ -->
@@ -109,7 +103,7 @@
           <li class="active"><a><%= $page %></a></li>
         % }
         % else {
-          <li><a href="<%= url_with->query([page => $page]); %>"><%= $page %></a></li>
+          <li><a href="<%= url_for($url_path)->query([q => $q, page => $page]); %>"><%= $page %></a></li>
         % }
       % }
 
@@ -118,7 +112,7 @@
         <li class="disabled"><a>&raquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_with->query([page => $pager->next_page]); %>">&raquo;</a></li>
+        <li class=""><a href="<%= url_for($url_path)->query([q => $q, page => $pager->next_page]); %>">&raquo;</a></li>
       % }
     </ul>
   </div>
@@ -127,7 +121,7 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="<%= $url_public %>/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
   <!-- ツールチップ -->
   <script>
   $('[data-toggle=tooltip]').tooltip();
