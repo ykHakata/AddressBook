@@ -7,12 +7,13 @@ use Data::Dumper;
 sub index {
     my $self = shift;
 
-    my $url_href   = q{/search};
+    my $url_path   = q{/search};
+    my $url_href   = $url_path;
     my $url_public = '';
-    my $url_form   = q{/search};
+    my $url_form   = $url_path;
     if ( $self->app->mode ne 'local' ) {
-        $url_href   = q{} . $url_href;
         $url_public = q{/AddressBook/public};
+        $url_form   = q{/AddressBook/script/address_book.cgi} . $url_form;
     }
 
     my $params = $self->req->params->to_hash;
