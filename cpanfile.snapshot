@@ -246,6 +246,14 @@ DISTRIBUTIONS
       Class::Accessor::Chained::Fast 0
       Test::Exception 0
       Test::More 0
+  Data-Page-Navigation-0.06
+    pathname: K/KA/KAZEBURO/Data-Page-Navigation-0.06.tar.gz
+    provides:
+      Data::Page::Navigation 0.06
+    requirements:
+      Data::Page 2
+      ExtUtils::MakeMaker 6.42
+      Test::More 0
   Data-Page-NoTotalEntries-0.02
     pathname: T/TO/TOKUHIROM/Data-Page-NoTotalEntries-0.02.tar.gz
     provides:
