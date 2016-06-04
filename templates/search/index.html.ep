@@ -29,20 +29,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/index.html" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
+          <a class="navbar-brand" href="<%= $url_public %>/index.html" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li><a href="/tutorial.html" data-toggle="tooltip" data-placement="bottom" title="アドレスブックの機能を体験できます">ためしてみる</a></li>
+            <li><a href="<%= $url_public %>/tutorial.html" data-toggle="tooltip" data-placement="bottom" title="アドレスブックの機能を体験できます">ためしてみる</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login.html" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します">ログイン</a></li>
+            <li><a href="<%= $url_public %>/login.html" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します">ログイン</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="well">
-      <form class="form-horizontal" method="get" action="<%= $url_path %>">
+      <form class="form-horizontal" method="get" action="<%= $url_form %>">
         <fieldset>
           <legend class="text-center h1">address book</legend>
           <div class="form-group">
@@ -94,7 +94,7 @@
         <li class="disabled"><a>&laquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_for($url_path)->query([q => $q, page => $pager->previous_page]); %>">&laquo;</a></li>
+        <li class=""><a href="<%= url_for($url_href)->query([q => $q, page => $pager->previous_page]); %>">&laquo;</a></li>
       % }
 
       <!-- ページ -->
@@ -103,7 +103,7 @@
           <li class="active"><a><%= $page %></a></li>
         % }
         % else {
-          <li><a href="<%= url_for($url_path)->query([q => $q, page => $page]); %>"><%= $page %></a></li>
+          <li><a href="<%= url_for($url_href)->query([q => $q, page => $page]); %>"><%= $page %></a></li>
         % }
       % }
 
@@ -112,7 +112,7 @@
         <li class="disabled"><a>&raquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_for($url_path)->query([q => $q, page => $pager->next_page]); %>">&raquo;</a></li>
+        <li class=""><a href="<%= url_for($url_href)->query([q => $q, page => $pager->next_page]); %>">&raquo;</a></li>
       % }
     </ul>
   </div>

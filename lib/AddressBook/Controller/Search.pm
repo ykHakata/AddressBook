@@ -7,10 +7,11 @@ use Data::Dumper;
 sub index {
     my $self = shift;
 
-    my $url_path   = q{/search};
+    my $url_href   = q{/search};
     my $url_public = '';
-        if ( $self->app->mode ne 'local' ) {
-        $url_path   = q{/AddressBook/script/address_book.cgi} . $url_path;
+    my $url_form   = q{/search};
+    if ( $self->app->mode ne 'local' ) {
+        $url_href   = q{} . $url_href;
         $url_public = q{/AddressBook/public};
     }
 
@@ -25,9 +26,10 @@ sub index {
 
     $self->stash( search_list => $search_list );
     $self->stash( pager       => $pager );
-    $self->stash( url_path    => $url_path );
-    $self->stash( q           => $params->{q} );
+    $self->stash( url_href    => $url_href );
     $self->stash( url_public  => $url_public );
+    $self->stash( url_form    => $url_form );
+    $self->stash( q           => $params->{q} );
 
     my $html = $self->render_to_string->to_string;
     my $output = HTML::FillInForm->fill( \$html, $params );
