@@ -42,7 +42,7 @@
       </div>
     </nav>
     <div class="well">
-      <form class="form-horizontal" method="get" action="<%= $url_form %>">
+      <form class="form-horizontal" method="get" action="<%= $url_form %>/search">
         <fieldset>
           <legend class="text-center h1">address book</legend>
           <div class="form-group">
@@ -94,7 +94,7 @@
         <li class="disabled"><a>&laquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_for($url_href)->query([q => $q, page => $pager->previous_page]); %>">&laquo;</a></li>
+        <li class=""><a href="<%= url_with->query([page => $pager->previous_page]); %>">&laquo;</a></li>
       % }
 
       <!-- ページ -->
@@ -103,7 +103,7 @@
           <li class="active"><a><%= $page %></a></li>
         % }
         % else {
-          <li><a href="<%= url_for($url_href)->query([q => $q, page => $page]); %>"><%= $page %></a></li>
+          <li><a href="<%= url_with->query([page => $page]); %>"><%= $page %></a></li>
         % }
       % }
 
@@ -112,7 +112,7 @@
         <li class="disabled"><a>&raquo;</a></li>
       % }
       % else {
-        <li class=""><a href="<%= url_for($url_href)->query([q => $q, page => $pager->next_page]); %>">&raquo;</a></li>
+        <li class=""><a href="<%= url_with->query([page => $pager->next_page]); %>">&raquo;</a></li>
       % }
     </ul>
   </div>
