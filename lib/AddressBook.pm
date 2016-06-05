@@ -7,6 +7,14 @@ use Data::Dumper;
 sub startup {
     my $self = shift;
 
+    my $home        = $self->home->to_string;
+    my $mode        = $self->mode;
+    my $moniker     = $self->moniker;
+    my $conf_file   = qq{$home/etc/$moniker.$mode.conf};
+
+    # 設定ファイル
+    $self->plugin( Config => +{ file => $conf_file } );
+
     # /perldoc
     $self->plugin('PODRenderer');
 
