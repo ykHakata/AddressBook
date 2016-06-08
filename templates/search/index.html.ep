@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<%= config 'url_public' %>/" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
+          <a class="navbar-brand" href="<%= config 'url_form' %>/" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
@@ -17,7 +17,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           % if (session 'mail') {
-            <li><a href="<%= config 'url_public' %>/profile" data-toggle="tooltip" data-placement="bottom" title="プロフィール画面へ移動します"><span class="glyphicon glyphicon-user"></span> <%= session 'mail' %></a></li>
+            <li><a href="<%= config 'url_form' %>/profile" data-toggle="tooltip" data-placement="bottom" title="プロフィール画面へ移動します"><span class="glyphicon glyphicon-user"></span> <%= session 'mail' %></a></li>
             <li>
             <form method="post" action="<%= config 'url_form' %>/logout" class=" navbar-right" style="height: 40px">
             <button type="submit" class=" btn-link" data-toggle="tooltip" data-placement="bottom" title="ログアウトします" style="padding: 11px 15px 11px 15px; margin: 0px; border: 0px; display: block; width: 100%; text-align: left;"><span class="glyphicon glyphicon-log-out"></span> : Logout</button>
@@ -25,7 +25,7 @@
             </li>
           % }
           % else {
-            <li><a href="<%= config 'url_public' %>/login" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します"><span class="glyphicon glyphicon-log-in"></span> : Login</a></li>
+            <li><a href="<%= config 'url_form' %>/login" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します"><span class="glyphicon glyphicon-log-in"></span> : Login</a></li>
           % }
           </ul>
         </div>
