@@ -7,10 +7,10 @@ use Data::Dumper;
 sub startup {
     my $self = shift;
 
-    my $home        = $self->home->to_string;
-    my $mode        = $self->mode;
-    my $moniker     = $self->moniker;
-    my $conf_file   = qq{$home/etc/$moniker.$mode.conf};
+    my $home      = $self->home->to_string;
+    my $mode      = $self->mode;
+    my $moniker   = $self->moniker;
+    my $conf_file = qq{$home/etc/$moniker.$mode.conf};
 
     # 設定ファイル
     $self->plugin( Config => +{ file => $conf_file } );
@@ -26,7 +26,12 @@ sub startup {
     # /search
     $r->get('/search')->to( controller => 'Search', action => 'index' );
 
+    # /login
+    $r->get('/login')->to( controller => 'Auth', action => 'login' );
+    $r->post('/login')->to( controller => 'Auth', action => 'auth' );
 
+    # /logout
+    $r->post('/logout')->to( controller => 'Auth', action => 'logout' );
 
 # $self->helper( model => sub {
 #     state $model = Teng::Schema::Loader->load(

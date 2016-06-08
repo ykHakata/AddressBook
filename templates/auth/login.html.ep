@@ -1,29 +1,58 @@
-% layout 'default';
-% title 'addressbook/login';
+% layout 'address_book', title => 'AddressBook ログイン';
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= config 'url_public' %>/" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="新規アカウント画面へ移動します"><span class="glyphicon glyphicon-pencil"></span>  アカウントを作成</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="well">
+      <form class="form-horizontal" method="post" action="<%= config 'url_form' %>/login">
+        <fieldset>
+          <legend class="text-center h1">address book</legend>
+          <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control input-lg" id="inputEmail" placeholder="Email" name="mail" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+              <input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password" name="password" value="">
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="ログインします"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <%= include 'inc/extension' =%>
+  <!-- ツールチップ -->
+  <script>
+  $('[data-toggle=tooltip]').tooltip();
+  </script>
+% content_for comment => begin
+<!-- ログインページ -->
+<!-- アカウント作成をクリックすると新規アカウント登録画面へ遷移 -->
+<!-- 登録メルアド パスワードを入力後 実行を押すとログイン後のトップページへ遷移 -->
+<!-- 入力値が正しくない場合、入力値をフォームにフィルインして再度入力を要求 -->
+% end
 
-<!-- コンテンツ -->
-<div id="contents">
 
-<!-- サイトタイトル -->
-<div class="section">
-    <h1 id="siteTitle">address book</h1>
-</div>
-<p> <%= stash->{message} %> </p>
-<!-- ログインフォーム -->
-<form method="post" action="/auth/login">
-
-<div class="sectionForm">
-    <%# <p id="inputMail"><label>メールアドレス：<input type="email" name="mail" size="20" maxlength="20" required></label></p> %>
-    <%# <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input type="password" name="pass" size="20" maxlength="4" required></label></p> %>
-    <p id="inputMail"><label>メールアドレス：<input  name="mail" size="20" maxlength="20" ></label></p>
-    <p id="inputPassword"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;パスワード：<input  name="pass" size="20" maxlength="4" ></label></p>
-</div>
-
-<!-- ログイン実行ボタン -->
-<div class="sectionSubmit">
-    <p id="inputSubmit"><input type="submit" value="実行"></p>
-</div>
-
-</form>
-
-<!-- /#contents --></div>
