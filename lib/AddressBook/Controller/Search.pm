@@ -34,9 +34,14 @@ sub create_search_list {
     my $word_data = [];
     my $count     = $pager->entries_per_page;
     my $count_row = 0;
-
+    my $icon_list = $self->_icon_list;
     for my $word ( @{$words} ) {
-        push @{ $word_data->[$count_row] }, $word;
+        my $icon = shift @{$icon_list};
+        push @{ $word_data->[$count_row] },
+            +{
+            icon  => $icon,
+            title => $word,
+            };
         $count -= 1;
         if ( !$count ) {
             $count = $pager->entries_per_page;
@@ -46,7 +51,6 @@ sub create_search_list {
 
     my $output_page_index = $pager->current_page - 1;
     my $search_list       = $word_data->[$output_page_index];
-
     return $search_list;
 }
 
@@ -80,6 +84,24 @@ sub create_pager {
     $pager->current_page($current_page);
 
     return $pager;
+}
+
+sub _icon_list {
+    my $self = shift;
+    my $icon = [
+        q{18_YukioKusakabe.png}, q{icon_158150_256.png},
+        q{icon_158160_256.png},  q{icon_158580_256.png},
+        q{icon_158840_256.png},  q{icon_158850_256.png},
+        q{icon_158860_256.png},  q{icon_159080_256.png},
+        q{icon_159090_256.png},  q{icon_159100_256.png},
+        q{icon_159890_256.png},  q{icon_160440_256.png},
+        q{icon_160450_256.png},  q{icon_161720_256.png},
+        q{icon_161770_256.png},  q{icon_161780_256.png},
+        q{icon_162270_256.png},  q{icon_162280_256.png},
+        q{icon_162290_256.png},  q{icon_162530_256.png},
+        q{icon_162550_256.png},  q{icon_162570_256.png},
+    ];
+    return $icon;
 }
 
 1;
