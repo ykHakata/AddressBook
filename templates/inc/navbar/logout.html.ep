@@ -1,0 +1,7 @@
+            <li>
+              <form method="post" action="<%= config 'url_form' %>/logout" class=" navbar-right" style="height: 40px">
+              <button type="submit" class=" btn-link" data-toggle="tooltip" data-placement="bottom" title="ログアウトします" style="padding: 11px 15px 11px 15px; margin: 0px; border: 0px; display: block; width: 100%; text-align: left;">
+                <span class="glyphicon glyphicon-log-out"></span> : Logout
+              </button>
+              </form>
+            </li>

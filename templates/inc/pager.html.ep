@@ -1,0 +1,29 @@
+  <div class="container text-center">
+    <ul class="pagination pagination-lg">
+      <!-- 左ボタン 最初のページの時は押せない -->
+    % if ($pager->first_page eq $pager->current_page) {
+      <li class="disabled"><a>&laquo;</a></li>
+    % }
+    % else {
+      <li class=""><a href="<%= url_with->query([page => $pager->previous_page]); %>">&laquo;</a></li>
+    % }
+
+      <!-- ページ -->
+    % for my $page ($pager->pages_in_navigation) {
+      % if ($page eq $pager->current_page) {
+        <li class="active"><a><%= $page %></a></li>
+      % }
+      % else {
+        <li><a href="<%= url_with->query([page => $page]); %>"><%= $page %></a></li>
+      % }
+    % }
+
+      <!-- 右ボタン 最後のページの時は押せない -->
+    % if ($pager->last_page eq $pager->current_page) {
+      <li class="disabled"><a>&raquo;</a></li>
+    % }
+    % else {
+      <li class=""><a href="<%= url_with->query([page => $pager->next_page]); %>">&raquo;</a></li>
+    % }
+    </ul>
+  </div>

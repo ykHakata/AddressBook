@@ -1,0 +1,10 @@
+            <li>
+              <a href="#" class="hidden-xs" data-toggle="tooltip" data-placement="bottom" title="新規アカウント画面へ移動します">
+              <span class="glyphicon glyphicon-pencil"></span> : アカウントを作成
+              </a>
+              <a href="#" class="visible-xs" data-toggle="tooltip" data-placement="top" title="新規アカウント画面へ移動します">
+              <span class="glyphicon glyphicon-pencil"></span> : アカウントを作成
+              </a>
+            </li>
+
+

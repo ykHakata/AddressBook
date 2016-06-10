@@ -2,35 +2,59 @@
   <div class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<%= config 'url_form' %>/" data-toggle="tooltip" data-placement="bottom" title="トップ画面へ移動します">AddressBook</a>
-        </div>
+        <!-- ナビバーヘッダ -->
+        <%= include 'inc/navbar/header' =%>
+        <!-- ナビバーリスト -->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
-            <li><a href="<%= config 'url_public' %>/tutorial.html" data-toggle="tooltip" data-placement="bottom" title="アドレスブックの機能を体験できます">ためしてみる</a></li>
+            <!-- ためしてみる -->
+            <%= include 'inc/navbar/try' =%>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           % if (session 'mail') {
-            <li><a href="<%= config 'url_form' %>/profile" data-toggle="tooltip" data-placement="bottom" title="プロフィール画面へ移動します"><span class="glyphicon glyphicon-user"></span> <%= session 'mail' %></a></li>
-            <li>
-            <form method="post" action="<%= config 'url_form' %>/logout" class=" navbar-right" style="height: 40px">
-            <button type="submit" class=" btn-link" data-toggle="tooltip" data-placement="bottom" title="ログアウトします" style="padding: 11px 15px 11px 15px; margin: 0px; border: 0px; display: block; width: 100%; text-align: left;"><span class="glyphicon glyphicon-log-out"></span> : Logout</button>
-            </form>
-            </li>
+            <!-- プロフィール -->
+            <%= include 'inc/navbar/profile' =%>
+            <!-- ログアウト -->
+            <%= include 'inc/navbar/logout' =%>
           % }
           % else {
-            <li><a href="<%= config 'url_form' %>/login" data-toggle="tooltip" data-placement="bottom" title="ログイン画面へ移動します"><span class="glyphicon glyphicon-log-in"></span> : Login</a></li>
+            <!-- ログイン -->
+            <%= include 'inc/navbar/login' =%>
           % }
           </ul>
         </div>
       </div>
     </nav>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      <a href="#help1" data-toggle="collapse" style="text-decoration: none; color: #777777;">Help / 使い方</a>
+      </div>
+      <div class="panel-body collapse" id="help1">
+
+        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
+           title="AddressBook リンク"
+           data-content="トップページへ移動します">AddressBook
+        </button>
+
+        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
+           title="ためしてみる リンク"
+           data-content="アカウントを持っていない方のための簡易的な学習用ページです">ためしてみる
+        </button>
+
+        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
+           title="Login リンク"
+           data-content="アカウントを持っている方のためのログインするページに移動する"><span class="glyphicon glyphicon-log-in"></span> : Login
+        </button>
+
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="popover" data-placement="bottom"
+           title="Search ボタン"
+           data-content="公開されているアドレス帳をキーワード検索します"><span class="glyphicon glyphicon-inbox"></span> Search
+        </button>
+
+      </div>
+    </div>
+
     <div class="well">
       <form class="form-horizontal" method="get" action="<%= config 'url_form' %>/search">
         <fieldset>
@@ -62,55 +86,17 @@
     </div>
 
     <!-- 検索結果リスト表示 -->
-    <div class="list-group">
-    % for my $word (@{$search_list}) {
-      <a href="#" class="list-group-item clearfix">
-        <img src="<%= config 'url_public' %>/img/<%= $word->{icon} %>" class="img-responsive img-thumbnail pull-left" style="width: 50px; margin-right: 15px;">
-        <h4 class="list-group-item-heading"><%= $word->{title} %></h4>
-        <p class="list-group-item-text">sample text</p>
-      </a>
-    % }
-    </div>
+    <% if ($search_list) { =%><%= include 'inc/search_list' =%><% } %>
+
   </div>
 
   <!-- ページおくり -->
-  % if ($pager->total_entries) {
-  <div class="container text-center">
-
-    <ul class="pagination pagination-lg">
-
-      <!-- 左ボタン 最初のページの時は押せない -->
-      % if ($pager->first_page eq $pager->current_page) {
-        <li class="disabled"><a>&laquo;</a></li>
-      % }
-      % else {
-        <li class=""><a href="<%= url_with->query([page => $pager->previous_page]); %>">&laquo;</a></li>
-      % }
-
-      <!-- ページ -->
-      % for my $page ($pager->pages_in_navigation) {
-        % if ($page eq $pager->current_page) {
-          <li class="active"><a><%= $page %></a></li>
-        % }
-        % else {
-          <li><a href="<%= url_with->query([page => $page]); %>"><%= $page %></a></li>
-        % }
-      % }
-
-      <!-- 右ボタン 最後のページの時は押せない -->
-      % if ($pager->last_page eq $pager->current_page) {
-        <li class="disabled"><a>&raquo;</a></li>
-      % }
-      % else {
-        <li class=""><a href="<%= url_with->query([page => $pager->next_page]); %>">&raquo;</a></li>
-      % }
-    </ul>
-  </div>
-  % }
+  <% if ($pager->total_entries) { =%><%= include 'inc/pager' =%><% } %>
 
   <%= include 'inc/extension' =%>
   <!-- ツールチップ -->
   <script>$('[data-toggle=tooltip]').tooltip();</script>
+  <script>$('[data-toggle=popover]').popover();</script>
 % content_for comment => begin
 <!-- トップページ -->
 <!-- ログインをクリックするとログイン画面へ遷移 -->

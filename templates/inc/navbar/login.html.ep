@@ -1,0 +1,8 @@
+            <li>
+              <a href="<%= config 'url_form' %>/login" class="hidden-xs" title="ログイン画面へ移動します" data-toggle="tooltip" data-placement="bottom">
+              <span class="glyphicon glyphicon-log-in"></span> : Login
+              </a>
+              <a href="<%= config 'url_form' %>/login" class="visible-xs" data-toggle="tooltip" data-placement="top" title="ログイン画面へ移動します">
+              <span class="glyphicon glyphicon-log-in"></span> : Login
+              </a>
+            </li>
