@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpTry" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted">ためしてみる</span></a>
+          </div>
+          <div id="helpTry" class="panel-body collapse">
+            アカウントを持っていない方のための簡易的な学習用ページです
+          </div>
+        </div>

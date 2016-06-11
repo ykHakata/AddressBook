@@ -16,6 +16,24 @@
       </div>
     </nav>
 
+    <!-- ヘルプ / 使い方 -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="#helpComponent" data-toggle="collapse" style="text-decoration: none;">
+          <span class="text-muted">Help / 使い方</span>
+        </a>
+      </div>
+      <div class="panel-body collapse" id="helpComponent">
+        <!-- AddresBook トップページ -->
+        <%= include 'inc/help/top' =%>
+        <!-- アカウントを作成 -->
+        <%= include 'inc/help/create_user' =%>
+        <!-- Login フォーム -->
+        <%= include 'inc/help/login_form' =%>
+
+      </div>
+    </div>
+
     <div class="well">
       <form class="form-horizontal" method="post" action="<%= config 'url_form' %>/login">
         <fieldset>
@@ -34,7 +52,7 @@
           </div>
           <div class="form-group text-center">
             <div class="col-lg-10 col-lg-offset-2">
-              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="ログインします"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="ログインします"><span class="glyphicon glyphicon-log-in"></span> : Login</button>
             </div>
           </div>
         </fieldset>

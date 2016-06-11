@@ -7,8 +7,11 @@
         <!-- ナビバーリスト -->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
+          % if (session 'mail') {
+          % } else {
             <!-- ためしてみる -->
             <%= include 'inc/navbar/try' =%>
+          % }
           </ul>
           <ul class="nav navbar-nav navbar-right">
           % if (session 'mail') {
@@ -16,8 +19,7 @@
             <%= include 'inc/navbar/profile' =%>
             <!-- ログアウト -->
             <%= include 'inc/navbar/logout' =%>
-          % }
-          % else {
+          % } else {
             <!-- ログイン -->
             <%= include 'inc/navbar/login' =%>
           % }
@@ -26,32 +28,29 @@
       </div>
     </nav>
 
+    <!-- ヘルプ / 使い方 -->
     <div class="panel panel-default">
       <div class="panel-heading">
-      <a href="#help1" data-toggle="collapse" style="text-decoration: none; color: #777777;">Help / 使い方</a>
+        <a href="#helpComponent" data-toggle="collapse" style="text-decoration: none;">
+          <span class="text-muted">Help / 使い方</span>
+        </a>
       </div>
-      <div class="panel-body collapse" id="help1">
-
-        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
-           title="AddressBook リンク"
-           data-content="トップページへ移動します">AddressBook
-        </button>
-
-        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
-           title="ためしてみる リンク"
-           data-content="アカウントを持っていない方のための簡易的な学習用ページです">ためしてみる
-        </button>
-
-        <button style="color: #777777;" type="button" class="btn btn-link btn-xs" data-toggle="popover" data-placement="bottom"
-           title="Login リンク"
-           data-content="アカウントを持っている方のためのログインするページに移動する"><span class="glyphicon glyphicon-log-in"></span> : Login
-        </button>
-
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="popover" data-placement="bottom"
-           title="Search ボタン"
-           data-content="公開されているアドレス帳をキーワード検索します"><span class="glyphicon glyphicon-inbox"></span> Search
-        </button>
-
+      <div class="panel-body collapse" id="helpComponent">
+        <!-- AddresBook トップページ -->
+        <%= include 'inc/help/top' =%>
+        % if (session 'mail') {
+        <!-- プロフィール -->
+        <%= include 'inc/help/profile' =%>
+        <!-- ログアウト -->
+        <%= include 'inc/help/logout' =%>
+        % } else {
+        <!-- ためしてみる -->
+        <%= include 'inc/help/try' =%>
+        <!-- ログイン -->
+        <%= include 'inc/help/login' =%>
+        % }
+        <!-- Search -->
+        <%= include 'inc/help/search' =%>
       </div>
     </div>
 
@@ -68,7 +67,7 @@
           <div class="form-group text-center">
             <div class="col-lg-10 col-lg-offset-2">
               <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="フリーワード検索">
-              <span class="glyphicon glyphicon-inbox"></span> Search</button>
+              <span class="glyphicon glyphicon-inbox"></span> : Search</button>
             </div>
           </div>
         </fieldset>

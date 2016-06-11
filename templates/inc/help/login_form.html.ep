@@ -1,0 +1,10 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpLoginForm" data-toggle="collapse" class="btn btn-primary btn-xs" >
+            <span class=""><span class="glyphicon glyphicon-log-in"></span> : Login</span></a>
+          </div>
+          <div id="helpLoginForm" class="panel-body collapse">
+            入力フォームに登録しているメールアドレス、パスワードを入力後ボタンをクリックしてください<br>
+            ログインに成功するとトップページに移動します
+          </div>
+        </div>

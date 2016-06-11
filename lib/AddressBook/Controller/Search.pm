@@ -8,7 +8,11 @@ sub index {
     my $self = shift;
 
     my $params = $self->req->params->to_hash;
-    my @words = split '', $params->{q};
+    my @words  = ();
+
+    if ( $params->{q} ) {
+        @words = split '', $params->{q};
+    }
 
     # ページャー情報作成
     my $pager = $self->create_pager( \@words, $params );

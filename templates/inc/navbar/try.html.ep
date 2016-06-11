@@ -1,1 +1,1 @@
-            <li><a href="<%= config 'url_public' %>/tutorial.html" data-toggle="tooltip" data-placement="bottom" title="アドレスブックの機能を体験できます">ためしてみる</a></li>
+            <li><a href="<%= config 'url_public' %>/tutorial.html">ためしてみる</a></li>

@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpLogout" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted"><span class="glyphicon glyphicon-log-out"></span> : Logout</span></a>
+          </div>
+          <div id="helpLogout" class="panel-body collapse">
+            ログアウトページに移動してログアウトを実行します
+          </div>
+        </div>

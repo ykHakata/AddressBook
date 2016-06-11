@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpTop" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted">AddressBook</span></a>
+          </div>
+          <div id="helpTop" class="panel-body collapse">
+            トップページへ移動します
+          </div>
+        </div>

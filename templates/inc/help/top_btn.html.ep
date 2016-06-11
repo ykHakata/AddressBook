@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpTopBtn" data-toggle="collapse" class="btn btn-primary btn-xs" ><span class=""><span class="glyphicon glyphicon-home"></span> : Top</span></a>
+          </div>
+          <div id="helpTopBtn" class="panel-body collapse">
+            トップページに移動します
+          </div>
+        </div>

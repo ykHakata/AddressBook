@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpLogin" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted"><span class="glyphicon glyphicon-log-in"></span> : Login</span></a>
+          </div>
+          <div id="helpLogin" class="panel-body collapse">
+            アカウントを持っている方のためのログインするページに移動する
+          </div>
+        </div>

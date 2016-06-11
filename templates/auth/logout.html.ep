@@ -10,7 +10,24 @@
       </div>
     </nav>
 
-    <div class="jumbotron ">
+    <!-- ヘルプ / 使い方 -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="#helpComponent" data-toggle="collapse" style="text-decoration: none;">
+          <span class="text-muted">Help / 使い方</span>
+        </a>
+      </div>
+      <div class="panel-body collapse" id="helpComponent">
+        <!-- AddresBook トップページ -->
+        <%= include 'inc/help/top' =%>
+        <!-- ログイン -->
+        <%= include 'inc/help/login' =%>
+        <!-- Top ボタン -->
+        <%= include 'inc/help/top_btn' =%>
+      </div>
+    </div>
+
+    <div class="jumbotron">
       <h1>ログアウトしました</h1>
       <p>もう一度ログインしたい場合</p>
       <p><a class="btn btn-primary btn-lg" href="<%= config 'url_form' %>/login" ><span class="glyphicon glyphicon-log-in"></span> : Login</a></p>

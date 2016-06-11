@@ -1,0 +1,8 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpProfile" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted"><span class="glyphicon glyphicon-user"></span> : <%= session 'mail' %></span></a>
+          </div>
+          <div id="helpProfile" class="panel-body collapse">
+            登録情報を確認するページに移動します
+          </div>
+        </div>

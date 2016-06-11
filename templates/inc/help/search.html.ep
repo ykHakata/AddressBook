@@ -1,0 +1,9 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpSearch" data-toggle="collapse" class="btn btn-primary btn-xs" ><span class=""><span class="glyphicon glyphicon-inbox"></span> : Search</span></a>
+          </div>
+          <div id="helpSearch" class="panel-body collapse">
+            公開されているアドレス帳をキーワード検索します<br><br>
+            ログイン実行時は公開されているものに加えて、回覧が許可されているアドレス帳も検索対象に入ります
+          </div>
+        </div>

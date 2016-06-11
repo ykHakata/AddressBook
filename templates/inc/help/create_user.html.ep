@@ -1,0 +1,9 @@
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a href="#helpCreateUser" data-toggle="collapse" style="text-decoration: none;"><span class="text-muted"><span class="glyphicon glyphicon-pencil"></span> : アカウントを作成</span></a>
+          </div>
+          <div id="helpCreateUser" class="panel-body collapse">
+            アカウントを持っていない方はここをクリックして、新規アカウントを作成してください<br>
+            自分自身のアドレスブックを作成することができます
+          </div>
+        </div>
