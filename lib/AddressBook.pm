@@ -33,6 +33,73 @@ sub startup {
     # /logout
     $r->post('/logout')->to( controller => 'Auth', action => 'logout' );
 
+    # トップページ
+    # addressbook/
+    # $r->get('/')->to( controller => 'Share', action => 'index' );
+
+    # 公開されているアドレス帳の検索画面
+    # addressbook/share
+    # $r->get('/share')->to( controller => 'Share', action => 'index' );
+
+    # 公開されているアドレス帳の検索
+    # addressbook/share/search
+    # $r->get('/share/search')->to( controller => 'Share', action => 'search' );
+
+    # 公開されているアドレス帳詳細情報
+    # addressbook/share/10
+    # $r->get( '/share/:id' => [ id => qr/\d+/ ] )
+    #     ->to( controller => 'Share', action => 'show' );
+
+# -----
+
+    # $r->add_shortcut(
+    #     resource => sub {
+    #         my ( $r, $name ) = @_;
+
+    #         # ショートカット to(action => 'index') -> to('#index')
+    #         my $resource = $r->any("/$name")->to( controller => $name );
+
+    #         # 検索入力画面
+    #         $resource->get->to('#index')->name($name);
+
+    #         # 検索実行
+    #         $resource->get('/search')->to('#search')->name("search_$name");
+
+    #         # 新規作成入力画面
+    #         $resource->get('/create')->to('#create')->name("create_$name");
+
+    #         # 新規データ保存
+    #         $resource->post->to('#store')->name("store_$name");
+
+    #         # 詳細画面
+    #         $resource->get('/:id')->to('#show')->name("show_$name");
+
+    #         # 更新入力画面
+    #         $resource->get('/:id/edit')->to('#edit')->name("edit_$name");
+
+    #         # 更新データ保存
+    #         $resource->put('/:id')->to('#update')->name("update_$name");
+
+    #         # 削除実行
+    #         $resource->delete('/:id')->to('#remove')->name("remove_$name");
+
+    #         return $resource;
+    #     }
+    # );
+
+    # 個人が所有しているアドレス帳
+    # $r->resource('personal');
+
+    # 例: personal の場合
+    # GET /personal -> ( controller => 'Personal', action => 'index' );
+    # GET /personal/search -> ( controller => 'Personal', action => 'search' );
+    # GET /personal/create -> ( controller => 'Personal', action => 'create' );
+    # POST /personal -> ( controller => 'Personal', action => 'store' );
+    # GET /personal/10 -> ( controller => 'Personal', action => 'show' );
+    # GET /personal/10/edit -> ( controller => 'Personal', action => 'edit' );
+    # PUT /personal/10 -> ( controller => 'Personal', action => 'update' );
+    # DELETE /personal/10 -> ( controller => 'Personal', action => 'remove' );
+
 # $self->helper( model => sub {
 #     state $model = Teng::Schema::Loader->load(
 #         connect_info => ['dbi:SQLite:./lib/AddressBook/Model/address_book.db','',''],
