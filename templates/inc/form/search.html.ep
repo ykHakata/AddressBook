@@ -1,0 +1,23 @@
+    <div class="well">
+      % if (session 'mail') {
+      <form class="form-horizontal" method="get" action="<%= config 'url_form' %>/personal/search">
+      % } else {
+      <form class="form-horizontal" method="get" action="<%= config 'url_form' %>/share/search">
+      % }
+        <fieldset>
+          <legend class="text-center h1">address book</legend>
+          <div class="form-group">
+            <label for="inputWord" class="col-lg-2 control-label">Keyword</label>
+            <div class="col-lg-10">
+              <input type="text" class="form-control input-lg" id="inputWord" placeholder="Keyword" name="q" value="">
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="フリーワード検索">
+              <span class="glyphicon glyphicon-inbox"></span> : Search</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>

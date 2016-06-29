@@ -1,4 +1,4 @@
-% layout 'address_book', title => 'AddressBook オープニング';
+% layout 'address_book', title => 'AddressBook 検索結果';
   <div class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -54,25 +54,8 @@
       </div>
     </div>
 
-    <div class="well">
-      <form class="form-horizontal" method="get" action="<%= config 'url_form' %>/search">
-        <fieldset>
-          <legend class="text-center h1">address book</legend>
-          <div class="form-group">
-            <label for="inputWord" class="col-lg-2 control-label">Keyword</label>
-            <div class="col-lg-10">
-              <input type="text" class="form-control input-lg" id="inputWord" placeholder="Keyword" name="q" value="">
-            </div>
-          </div>
-          <div class="form-group text-center">
-            <div class="col-lg-10 col-lg-offset-2">
-              <button type="submit" class="btn-lg btn-primary" data-toggle="tooltip" data-placement="bottom" title="フリーワード検索">
-              <span class="glyphicon glyphicon-inbox"></span> : Search</button>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+    <!-- 検索入力フォーム -->
+    <%= include 'inc/form/search' =%>
 
     <!-- 検索結果 -->
     <div class="panel panel-info">
@@ -97,7 +80,7 @@
   <script>$('[data-toggle=tooltip]').tooltip();</script>
   <script>$('[data-toggle=popover]').popover();</script>
 % content_for comment => begin
-<!-- トップページ -->
+<!-- 検索結果ページ -->
 <!-- ログインをクリックするとログイン画面へ遷移 -->
 <!-- ためしてみるをクリックすると体験ページへ遷移 -->
 <!-- Keyword フォームに入力して Search 実行すると該当する公開していい住所が表示 -->

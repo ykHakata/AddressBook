@@ -36,10 +36,7 @@ sub startup {
     my $r = $self->routes;
 
     # /
-    $r->get('/')->to( controller => 'Search', action => 'index' );
-
-    # /search
-    $r->get('/search')->to( controller => 'Search', action => 'index' );
+    $r->get('/')->to( controller => 'Share', action => 'index' );
 
     # /login
     $r->get('/login')->to( controller => 'Auth', action => 'login' );
@@ -47,23 +44,6 @@ sub startup {
 
     # /logout
     $r->post('/logout')->to( controller => 'Auth', action => 'logout' );
-
-    # トップページ
-    # addressbook/
-    # $r->get('/')->to( controller => 'Share', action => 'index' );
-
-    # 公開されているアドレス帳の検索画面
-    # addressbook/share
-    # $r->get('/share')->to( controller => 'Share', action => 'index' );
-
-  # 公開されているアドレス帳の検索
-  # addressbook/share/search
-  # $r->get('/share/search')->to( controller => 'Share', action => 'search' );
-
-    # 公開されているアドレス帳詳細情報
-    # addressbook/share/10
-    # $r->get( '/share/:id' => [ id => qr/\d+/ ] )
-    #     ->to( controller => 'Share', action => 'show' );
 
     # -----
 

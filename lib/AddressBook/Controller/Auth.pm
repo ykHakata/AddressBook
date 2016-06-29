@@ -16,7 +16,7 @@ sub auth {
 
         # セッション書き込み
         $self->session( $auth_model->_get_session_params );
-        $self->redirect_to('/search');
+        $self->redirect_to('/personal');
         return;
     }
 

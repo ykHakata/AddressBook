@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 # GET /personal -> ( controller => 'Personal', action => 'index' );
 sub index {
     my $self = shift;
-    $self->render( text => 'index' );
+    $self->render();
     return;
 }
 

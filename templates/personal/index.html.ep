@@ -1,0 +1,64 @@
+% layout 'address_book', title => 'AddressBook 個人アドレストップ';
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- ナビバーヘッダ -->
+        <%= include 'inc/navbar/header' =%>
+        <!-- ナビバーリスト -->
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+          % if (session 'mail') {
+          % } else {
+            <!-- ためしてみる -->
+            <%= include 'inc/navbar/try' =%>
+          % }
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          % if (session 'mail') {
+            <!-- プロフィール -->
+            <%= include 'inc/navbar/profile' =%>
+            <!-- ログアウト -->
+            <%= include 'inc/navbar/logout' =%>
+          % } else {
+            <!-- ログイン -->
+            <%= include 'inc/navbar/login' =%>
+          % }
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ヘルプ / 使い方 -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="#helpComponent" data-toggle="collapse" style="text-decoration: none;">
+          <span class="text-muted">Help / 使い方</span>
+        </a>
+      </div>
+      <div class="panel-body collapse" id="helpComponent">
+        <!-- AddresBook トップページ -->
+        <%= include 'inc/help/top' =%>
+        <!-- プロフィール -->
+        <%= include 'inc/help/profile' =%>
+        <!-- ログアウト -->
+        <%= include 'inc/help/logout' =%>
+        <!-- Search -->
+        <%= include 'inc/help/search' =%>
+      </div>
+    </div>
+
+    <!-- 検索入力フォーム -->
+    <%= include 'inc/form/search' =%>
+
+  </div>
+
+  <%= include 'inc/extension' =%>
+  <!-- ツールチップ -->
+  <script>$('[data-toggle=tooltip]').tooltip();</script>
+  <script>$('[data-toggle=popover]').popover();</script>
+% content_for comment => begin
+<!-- 個人アドレストップページ -->
+<!-- ログインをクリックするとログイン画面へ遷移 -->
+<!-- ためしてみるをクリックすると体験ページへ遷移 -->
+<!-- Keyword フォームに入力して Search 実行すると該当する公開していい住所が表示 -->
+% end
