@@ -37,6 +37,9 @@ sub _is_auth {
         password => '0520',
     };
 
+    return if !$self->mail;
+    return if !$self->password;
+
     if (   $self->mail eq $auth->{mail}
         && $self->password eq $auth->{password} )
     {
