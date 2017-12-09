@@ -1,0 +1,110 @@
+@charset "shift_jis";
+
+/* 共通のスタイルシート */
+
+
+
+
+/*body { margin: 0; padding: 0; }
+h1 { color: #ff0000; }
+p { line-height: 140%; }
+#header { background-color: #c0c0c0; }
+.copy { color: #808080; }*/
+
+/* index.htmlのスタイルシート */
+
+/*h1 {background-color: red;	}*/
+
+
+
+#page{
+	margin: 0 auto;
+	width: 955px;
+	height: 590px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+}
+
+#head	 {
+	width: 955px;
+	height: 50px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	}
+
+
+#tamesi {
+	width: 127px;
+	height: 32px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	float: left;
+	}
+
+#roguin {
+	float: right;
+	width: 127px;
+	height: 32px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	}
+
+
+#adoresu {
+	clear: both;
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	text-align:center;
+	}
+#nyuryoku{
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	text-align:center;
+	}
+#botan{
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	border-top: 1px red solid;
+	border-right: 1px red solid;
+	border-bottom: 1px red solid;
+	border-left: 1px red solid;
+	text-align:center;
+	}
+
+
+
+
+
+/*<div id="tamesi">
+	<p>ためしてみる</p>
+</div>
+<div id="roguin">
+	<p>ログイン</p>
+</div>
+	<h1>address book</h1>
+</div>
+<div id="nyuryoku">
+	<h1>入力フォーム</h1>
+</div>
+<div id="botan">
+	<h1>入力実行ボタン</h1>
+</div> */
